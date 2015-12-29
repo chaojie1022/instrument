@@ -105,41 +105,5 @@
         </property>
     </bean>
 
-    <!-- freemarker static function -->
-    <bean id="freemarkerStaticModelsProps"
-          class="org.springframework.beans.factory.config.PropertiesFactoryBean">
-        <property name="location" value="classpath:freemarkerstatic.properties"/>
-    </bean>
-
-
-    <bean id="freemarkerConfig"
-          class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
-        <property name="templateLoaderPaths">
-            <list>
-                <value>/WEB-INF/views/</value>
-            </list>
-        </property>
-
-        <property name="freemarkerSettings">
-            <props>
-                <prop key="template_update_delay">5</prop>
-                <prop key="defaultEncoding">UTF-8</prop>
-                <prop key="datetime_format">yyyy-MM-dd HH:mm:ss</prop>
-                <prop key="date_format">yyyy-MM-dd</prop>
-                <prop key="time_format">HH:mm:ss</prop>
-                <prop key="number_format">0.######</prop>
-                <prop key="whitespace_stripping">true</prop>
-            </props>
-        </property>
-        <property name="freemarkerVariables">
-            <map>
-                <!-- freemarker全局变量 -->
-                <!-- <entry key="debug" value="${debug}"></entry> <entry key="pageTitle"
-                    value="${pageTitle}"></entry> <entry key="pageStyle" value="${pageStyle}"></entry> -->
-            </map>
-        </property>
-    </bean>
-
-
 
 </beans>

@@ -14,6 +14,7 @@
     <context:property-placeholder location="classpath:resources.properties"/>
 
     <!-- 开启controller注解支持 -->
+    <mvc:annotation-driven />
     <!-- 注意事项请参考：http://jinnianshilongnian.iteye.com/blog/1762632 -->
     <context:component-scan base-package="com.kongwu.insweb.controller"
                             use-default-filters="false">
@@ -23,18 +24,8 @@
                                 expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
     </context:component-scan>
 
-    <!-- 定时器开关 开始 -->
-    <!--<task:annotation-driven/>-->
-    <!-- 定时器开关 结束 -->
-
-    <aop:aspectj-autoproxy proxy-target-class="true">
-        <aop:include name="controllerAspect"/>
-    </aop:aspectj-autoproxy>
 
 
-
-    <!-- 当在web.xml 中 DispatcherServlet使用 <url-pattern>/</url-pattern> 映射时，能映射静态资源 -->
-    <mvc:default-servlet-handler/>
 
     <!-- 静态资源映射 -->
     <mvc:resources location="/assets/" mapping="/assets/**"/>
@@ -97,7 +88,33 @@
     <bean id="exceptionHandlerExceptionResolver"
           class="org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver">
     </bean>
+    <bean id="freemarkerConfig"
+          class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <property name="templateLoaderPaths">
+            <list>
+                <value>/WEB-INF/views/</value>
+            </list>
+        </property>
 
+        <property name="freemarkerSettings">
+            <props>
+                <prop key="template_update_delay">5</prop>
+                <prop key="defaultEncoding">UTF-8</prop>
+                <prop key="datetime_format">yyyy-MM-dd HH:mm:ss</prop>
+                <prop key="date_format">yyyy-MM-dd</prop>
+                <prop key="time_format">HH:mm:ss</prop>
+                <prop key="number_format">0.######</prop>
+                <prop key="whitespace_stripping">true</prop>
+            </props>
+        </property>
+        <property name="freemarkerVariables">
+            <map>
+                <!-- freemarker全局变量 -->
+                <!-- <entry key="debug" value="${debug}"></entry> <entry key="pageTitle"
+                    value="${pageTitle}"></entry> <entry key="pageStyle" value="${pageStyle}"></entry> -->
+            </map>
+        </property>
+    </bean>
 
 
 </beans>
