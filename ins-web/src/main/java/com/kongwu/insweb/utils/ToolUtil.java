@@ -26,7 +26,6 @@ import java.util.Map;
  * Description: 工具类工具. <br/>
  * Date: 2014年6月24日 下午5:21:30 <br/>
  *
- * @author zyyang3
  * @version 1.0
  * @see
  * @since JDK 1.6

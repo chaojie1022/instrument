@@ -7,7 +7,8 @@
 
 package com.kongwu.insweb.freemarker.staticfunction;
 
-import cn.drive.web.utils.DateUtils;
+
+import com.kongwu.insweb.utils.DateUtils;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
