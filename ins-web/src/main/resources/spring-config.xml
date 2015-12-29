@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+          http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+
+
+          http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+          http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+          http://www.springframework.org/schema/task
+	    http://www.springframework.org/schema/task/spring-task-3.0.xsd">
+
+    <context:property-placeholder location="classpath:resources.properties"/>
+
+
+    <!-- 扫描注解Bean annotation-config="false" -->
+    <context:component-scan base-package="cn.drive.web">
+        <context:exclude-filter type="annotation"
+                                expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
+    <!--<task:annotation-driven/> 启动async注解 -->
+    <task:annotation-driven executor="AutoBuildExecutor"/>
+    <task:executor id="myExecutor" pool-size="2"/>
+    <task:executor id="AutoBuildExecutor" pool-size="10"/>
+
+    <!-- 开启AOP监听 只对当前配置文件有效 -->
+    <aop:aspectj-autoproxy expose-proxy="true"/>
+
+
+    <!--***************************************************** system数据源 ***************************************************** -->
+    <bean id="systemDataSource" class="com.alibaba.druid.pool.DruidDataSource"
+          init-method="init" destroy-method="close">
+        <!-- 基本属性 url、user、password -->
+        <property name="url" value="${connection.systemurl}"/>
+        <property name="username" value="${connection.username}"/>
+        <property name="password" value="${connection.password}"/>
+
+        <!-- 配置初始化大小、最小、最大 -->
+        <property name="initialSize" value="${druid.initialSize}"/>
+        <property name="minIdle" value="${druid.minIdle}"/>
+        <property name="maxActive" value="${druid.maxActive}"/>
+
+        <!-- 配置获取连接等待超时的时间 -->
+        <property name="maxWait" value="${druid.maxWait}"/>
+        <!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+        <property name="timeBetweenEvictionRunsMillis"
+                  value="${druid.timeBetweenEvictionRunsMillis}"/>
+
+        <!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+        <property name="minEvictableIdleTimeMillis" value="${druid.minEvictableIdleTimeMillis}"/>
+
+        <property name="validationQuery" value="${druid.validationQuery}"/>
+        <property name="testWhileIdle" value="${druid.testWhileIdle}"/>
+        <property name="testOnBorrow" value="${druid.testOnBorrow}"/>
+        <property name="testOnReturn" value="${druid.testOnReturn}"/>
+
+        <!-- 打开PSCache，并且指定每个连接上PSCache的大小 如果用Oracle，则把poolPreparedStatements配置为true，mysql可以配置为false。 -->
+        <property name="poolPreparedStatements" value="${druid.poolPreparedStatements}"/>
+        <property name="maxPoolPreparedStatementPerConnectionSize"
+                  value="${druid.maxPoolPreparedStatementPerConnectionSize}"/>
+
+        <!-- 配置监控统计拦截的filters -->
+        <property name="filters" value="${druid.filters}"/>
+
+    </bean>
+
+    <bean id="systemDataSourceProxy"
+          class="org.springframework.jdbc.datasource.TransactionAwareDataSourceProxy">
+        <property name="targetDataSource" ref="systemDataSource"/>
+    </bean>
+
+    <!--事务管理器配置 -->
+    <bean id="systemTransactionManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="systemDataSourceProxy"/>
+    </bean>
+
+    <tx:advice id="txAdvice_sys" transaction-manager="systemTransactionManager">
+        <tx:attributes>
+            <tx:method name="*" propagation="REQUIRED"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <aop:config expose-proxy="true" proxy-target-class="true">
+        <!-- 只对业务逻辑层实施事务 -->
+        <aop:pointcut id="txPointcut_sys"
+                      expression="execution(* cn.drive.web..service.system..*+.*(..))"/>
+        <aop:advisor id="txAdvisor_sys" advice-ref="txAdvice_sys"
+                     pointcut-ref="txPointcut_sys"/>
+    </aop:config>
+
+    <!-- 配置 system mybatis -->
+    <bean id="SystemSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="systemDataSource"/>
+        <property name="configLocation"
+                  value="classpath:mybatis/system/Configuration.xml"/>
+        <property name="mapperLocations"
+                  value="classpath:mybatis/system/*Mapper.xml"/>
+    </bean>
+    <!-- system mybatis Dao -->
+    <bean id="systemBaseDao" class="cn.drive.web.dao.SystemBaseDao">
+        <property name="sqlSessionFactory" ref="SystemSqlSessionFactory"/>
+    </bean>
+
+
+    <!-- 配置spring 的 email服务 -->
+    <bean id="JavaMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host" value="${mail.host}"/>
+        <property name="username" value="${mail.username}"/>
+        <property name="password" value="${mail.password}"/>
+        <property name="defaultEncoding" value="UTF-8"></property>
+        <property name="javaMailProperties">
+            <props>
+                <prop key="mail.smtp.auth">${mail.smtp.auth}</prop>
+                <prop key="mail.smtp.timeout">${mail.smtp.timeout}</prop>
+                <!-- <prop key="mail.smtp.starttls.enable">true</prop> <prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop>
+                    <prop key="mail.smtp.socketFactory.fallback">false</prop> -->
+            </props>
+        </property>
+    </bean>
+
+    <!-- freemarker static function -->
+    <bean id="freemarkerStaticModelsProps"
+          class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="location" value="classpath:freemarkerstatic.properties"/>
+    </bean>
+    <bean id="freemarkerStaticModels"
+          class="cn.drive.web.service.system.FreemarkerStaticModels"
+          factory-method="getInstance">
+        <property name="staticModels" ref="freemarkerStaticModelsProps"/>
+    </bean>
+
+    <!-- 自定义的freemarker标签 -->
+    <bean id="blockDirective"
+          class="cn.drive.web.freemarker.directive.BlockDirective"/>
+    <bean id="extendsDirective"
+          class="cn.drive.web.freemarker.directive.ExtendsDirective"/>
+    <bean id="overrideDirective"
+          class="cn.drive.web.freemarker.directive.OverrideDirective"/>
+
+    <bean id="freemarkerConfig"
+          class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <property name="templateLoaderPaths">
+            <list>
+                <value>/WEB-INF/views/</value>
+            </list>
+        </property>
+
+        <property name="freemarkerSettings">
+            <props>
+                <prop key="template_update_delay">5</prop>
+                <prop key="defaultEncoding">UTF-8</prop>
+                <prop key="datetime_format">yyyy-MM-dd HH:mm:ss</prop>
+                <prop key="date_format">yyyy-MM-dd</prop>
+                <prop key="time_format">HH:mm:ss</prop>
+                <prop key="number_format">0.######</prop>
+                <prop key="whitespace_stripping">true</prop>
+            </props>
+        </property>
+        <property name="freemarkerVariables">
+            <map>
+                <entry key="extends" value-ref="extendsDirective"></entry>
+                <entry key="override" value-ref="overrideDirective"></entry>
+                <entry key="block" value-ref="blockDirective"></entry>
+                <!-- freemarker全局变量 -->
+                <!-- <entry key="debug" value="${debug}"></entry> <entry key="pageTitle"
+                    value="${pageTitle}"></entry> <entry key="pageStyle" value="${pageStyle}"></entry> -->
+            </map>
+        </property>
+    </bean>
+
+
+    <import resource="classpath:spring-config-cache.xml"/>
+    <import resource="classpath:spring-config-shiro.xml"/>
+    <import resource="classpath:spring-config-springCache.xml"/>
+    <import resource="classpath:mongo-config.xml"/>
+
+</beans>

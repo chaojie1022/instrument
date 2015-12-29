@@ -1,0 +1,118 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <context:property-placeholder location="classpath:resources.properties"/>
+
+    <!-- 开启controller注解支持 -->
+    <!-- 注意事项请参考：http://jinnianshilongnian.iteye.com/blog/1762632 -->
+    <context:component-scan base-package="cn.drive.web.controller"
+                            use-default-filters="false">
+        <context:include-filter type="annotation"
+                                expression="org.springframework.stereotype.Controller"/>
+        <context:include-filter type="annotation"
+                                expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
+    </context:component-scan>
+
+    <!-- 定时器开关 开始 -->
+    <!--<task:annotation-driven/>-->
+    <!-- 定时器开关 结束 -->
+
+    <aop:aspectj-autoproxy proxy-target-class="true">
+        <aop:include name="controllerAspect"/>
+    </aop:aspectj-autoproxy>
+
+    <bean id="controllerAspect" class="cn.drive.web.aop.ControllerTraceAspect"/>
+
+    <mvc:annotation-driven>
+        <mvc:argument-resolvers>
+            <bean
+                    class="cn.drive.web.bind.method.CurrentUserMethodArgumentResolver"/>
+        </mvc:argument-resolvers>
+    </mvc:annotation-driven>
+
+    <!-- 当在web.xml 中 DispatcherServlet使用 <url-pattern>/</url-pattern> 映射时，能映射静态资源 -->
+    <mvc:default-servlet-handler/>
+
+    <!-- 静态资源映射 -->
+    <!-- <mvc:resources mapping="/static/**" location="/WEB-INF/static/"/> -->
+    <mvc:resources location="/static/" mapping="/static/**"/>
+
+    <!-- 文件上传 -->
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- one of the properties available; the maximum file size in bytes -->
+        <property name="defaultEncoding" value="UTF-8"/>
+        <property name="maxUploadSize" value="2000000000"/>
+        <property name="uploadTempDir" value="/static/upload"/>
+        <property name="maxInMemorySize" value="1024" />
+       <!-- CommonsMultipartResolver允许设置的属性有：
+        defaultEncoding：表示用来解析request请求的默认编码格式，当没有指定的时候根据Servlet规范会使用默认值ISO-8859-1。
+                         当request自己指明了它的编码格式的时候就会忽略这里指定的defaultEncoding。
+        uploadTempDir：设置上传文件时的临时目录，默认是Servlet容器的临时目录。
+        maxUploadSize：设置允许上传的最大文件大小，以字节为单位计算。当设为-1时表示无限制，默认是-1。
+        maxInMemorySize：设置在文件上传时允许写到内存中的最大值，以字节为单位计算，默认是10240。-->
+    </bean>
+
+    <!-- json消息 -->
+    <bean
+            class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+        <property name="messageConverters">
+            <list>
+                <ref bean="stringHttpMessageConverter"/>
+                <ref bean="mappingJackson2HttpMessageConverter"/>
+            </list>
+        </property>
+    </bean>
+    <bean id="mappingJackson2HttpMessageConverter"
+          class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+        <property name="supportedMediaTypes">
+            <list>
+                <value>application/json; charset=UTF-8</value>
+                <value>application/x-www-form-urlencoded; charset=UTF-8</value>
+            </list>
+
+        </property>
+    </bean>
+    <bean id="stringHttpMessageConverter" class="org.springframework.http.converter.StringHttpMessageConverter">
+        <property name="supportedMediaTypes">
+            <list>
+                <value>text/plain;charset=UTF-8</value>
+                <value>text/html;charset=UTF-8</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- 视图解析 -->
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+        <property name="cache" value="true"/>
+        <property name="prefix" value=""/>
+        <property name="suffix" value=".ftl"/>
+        <property name="exposeSpringMacroHelpers" value="true"/>
+        <property name="exposeRequestAttributes" value="true"/>
+        <property name="exposeSessionAttributes" value="true"/>
+        <property name="requestContextAttribute" value="rc"/>
+        <property name="contentType" value="text/html;charset=UTF-8"/>
+        <property name="attributesMap" ref="freemarkerStaticModels"/>
+    </bean>
+
+    <!-- 控制器异常处理 -->
+    <bean id="exceptionHandlerExceptionResolver"
+          class="org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver">
+    </bean>
+
+    <bean class="cn.drive.web.exception.DefaultExceptionHandler"/>
+
+    <import resource="spring-mvc-shiro.xml"/>
+
+</beans>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ins-web/ins-web.iml" filepath="$PROJECT_DIR$/ins-web/ins-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ins-wechat/ins-wechat.iml" filepath="$PROJECT_DIR$/ins-wechat/ins-wechat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/instrument.iml" filepath="$PROJECT_DIR$/instrument.iml" />
+    </modules>
+  </component>
+</project>
