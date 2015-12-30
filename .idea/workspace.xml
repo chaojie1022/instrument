@@ -1,182 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ff79680b-fc45-49bf-86d0-b9c36ef55843" name="Default" comment="springmvc配置&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ehcache_ehcache_core_2_5_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_core_1_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_ehcache_1_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_quartz_1_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_spring_1_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_web_1_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opensymphony_quartz_quartz_1_6_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/controller/login/LoginController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/credentials/RetryLimitHashedCredentialsMatcher.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/freemarker/MyFreeMarkerView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/realm/UserRealm.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/security/LoginHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/service/SecurityService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/spring/SpringCacheManagerWrapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/EncryptUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/UUIDGenerator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/resources/ehcache/ehcache.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/resources/spring-config-cache.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/resources/spring-mvc-shiro.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/webapp/WEB-INF/views/login.ftl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/controller/BaseController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/controller/UploadController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/controller/index/IndexController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/CustomerAssets.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/CustomerAssetsExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/Instrument.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/InstrumentCategroy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/InstrumentCategroyExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/InstrumentExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/InstrumentParts.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/InstrumentPartsCategroy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/InstrumentPartsCategroyExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/InstrumentPartsExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/Order.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/OrderExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/OrderInstrument.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/OrderInstrumentExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/OrderPartsRel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/OrderPartsRelExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/OrderWithBLOBs.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/RoleUserRel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/RoleUserRelExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/Service.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/ServiceExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/UserCustomer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/UserCustomerExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/UserEngineer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/UserEngineerExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/UserExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/UserInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/UserInfoExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/UserOperator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/UserOperatorExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/UserServiceEnterprise.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/UserServiceEnterpriseEmployee.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/UserServiceEnterpriseEmployeeExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/UserServiceEnterpriseExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/WorkOrder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/WorkOrderExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/userAdmin.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/userAdminExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/CustomerAssetsMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/InstrumentCategroyMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/InstrumentMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/InstrumentPartsCategroyMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/InstrumentPartsMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/OrderInstrumentMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/OrderMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/OrderPartsRelMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/RoleUserRelMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/ServiceMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/UserCustomerMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/UserEngineerMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/UserInfoMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/UserMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/UserOperatorMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/UserServiceEnterpriseEmployeeMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/UserServiceEnterpriseMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/WorkOrderMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/userAdminMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/exception/DefaultExceptionHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/freemarker/directive/BlockDirective.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/freemarker/directive/DirectiveUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/freemarker/directive/ExtendsDirective.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/freemarker/directive/OverrideDirective.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/freemarker/directive/TemplateDirectiveBodyOverrideWraper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/freemarker/staticfunction/FreemarkerFunction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/json/FastJsonHttpMessageConverter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/json/JSONResult.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/json/StringHttpMessageConverter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/CustomerAssetsMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/InstrumentCategroyMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/InstrumentMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/InstrumentPartsCategroyMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/InstrumentPartsMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/OrderInstrumentMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/OrderMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/OrderPartsRelMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/RoleUserRelMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/ServiceMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/UserCustomerMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/UserEngineerMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/UserInfoMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/UserMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/UserOperatorMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/UserServiceEnterpriseEmployeeMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/UserServiceEnterpriseMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/WorkOrderMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/userAdminMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/spring/SpringUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/Constants.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/DateUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/EmailLogin.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/FreemarkerUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/GetWebPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/HtmlRegUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/HtmlToPlainText.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/HttpRequest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/HttpsUpload.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/IdGenerator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/ImgUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/ReadExcel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/ServiceUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/StreamGobbler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/StringHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/ToolUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/resources/freemarkerstatic.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/resources/generatorConfig.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/resources/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/resources/resources.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/resources/spring-config.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/resources/spring-mvc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/target/classes/com/kongwu/insweb/controller/index/IndexController.class" afterPath="$PROJECT_DIR$/ins-web/target/classes/com/kongwu/insweb/controller/index/IndexController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/target/classes/com/kongwu/insweb/utils/Constants.class" afterPath="$PROJECT_DIR$/ins-web/target/classes/com/kongwu/insweb/utils/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/target/classes/com/kongwu/insweb/utils/ImgUtils.class" afterPath="$PROJECT_DIR$/ins-web/target/classes/com/kongwu/insweb/utils/ImgUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/ins_web_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/ins_web_war_exploded.xml" />
+    <list default="true" id="ff79680b-fc45-49bf-86d0-b9c36ef55843" name="Default" comment="环境搭建">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/Role.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/RoleExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/RoleMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/mapper/RoleMapper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/ins-web.iml" afterPath="$PROJECT_DIR$/ins-web/ins-web.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/pom.xml" afterPath="$PROJECT_DIR$/ins-web/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/controller/UploadController.java" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/controller/UploadController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/controller/index/IndexController.java" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/controller/index/IndexController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/RoleUserRel.java" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/RoleUserRel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/RoleUserRelExample.java" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/RoleUserRelExample.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/CustomerAssetsMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/CustomerAssetsMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/InstrumentCategroyMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/InstrumentCategroyMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/InstrumentMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/InstrumentMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/InstrumentPartsCategroyMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/InstrumentPartsCategroyMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/InstrumentPartsMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/InstrumentPartsMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/OrderMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/OrderMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/OrderPartsRelMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/OrderPartsRelMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/RoleUserRelMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/RoleUserRelMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/ServiceMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/ServiceMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserCustomerMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserCustomerMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserEngineerMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserEngineerMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserInfoMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserInfoMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserOperatorMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserOperatorMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserServiceEnterpriseEmployeeMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserServiceEnterpriseEmployeeMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserServiceEnterpriseMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserServiceEnterpriseMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/WorkOrderMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/WorkOrderMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/userAdminMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/userAdminMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/mapper/RoleUserRelMapper.java" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/mapper/RoleUserRelMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/Constants.java" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/ImgUtils.java" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/ImgUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/resources/generatorConfig.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/resources/generatorConfig.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/resources/spring-config.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/resources/spring-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/resources/spring-mvc.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/resources/spring-mvc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/webapp/assets/app/css/app.css" afterPath="$PROJECT_DIR$/ins-web/src/main/webapp/assets/app/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/target/classes/spring-config.xml" afterPath="$PROJECT_DIR$/ins-web/target/classes/spring-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/target/classes/spring-mvc.xml" afterPath="$PROJECT_DIR$/ins-web/target/classes/spring-mvc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/ins-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-wechat/ins-wechat.iml" afterPath="$PROJECT_DIR$/ins-wechat/ins-wechat.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="instrument.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -234,10 +64,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RoleExample.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RoleMapper.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/mapper/RoleMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.11486486">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RoleExample.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/RoleExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3496622">
+            <state vertical-scroll-proportion="0.0">
               <caret line="450" column="9" selection-start-line="450" selection-start-column="9" selection-end-line="450" selection-end-column="9" />
               <folding />
             </state>
@@ -302,16 +142,6 @@
                 <element signature="e#0#3176#0" expanded="false" />
                 <element signature="imports" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/mapper/UserMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -673,6 +503,112 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="insweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="instrument" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="instrument" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ins-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="insweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="instrument" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="instrument" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ins-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="insweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="instrument" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="instrument" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ins-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="insweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xml" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1192,7 +1128,7 @@
       <workItem from="1451437606450" duration="5474000" />
       <workItem from="1451450262771" duration="94000" />
       <workItem from="1451450368051" duration="760000" />
-      <workItem from="1451451134316" duration="8657000" />
+      <workItem from="1451451134316" duration="9546000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1451459797399</created>
@@ -1200,11 +1136,17 @@
       <option name="project" value="LOCAL" />
       <updated>1451459797399</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="环境搭建">
+      <created>1451460583252</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1451460583252</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29300000" />
+    <option name="totallyTimeSpent" value="30189000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1288,7 +1230,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="springmvc配置&#10;" />
     <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
+    <MESSAGE value="环境搭建" />
+    <option name="LAST_COMMIT_MESSAGE" value="环境搭建" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1301,13 +1244,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/controller/index/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/controller/login/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1748,14 +1684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/Role.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/RoleMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-40.73077">
@@ -1775,8 +1703,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/RoleExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3496622">
+        <state vertical-scroll-proportion="0.0">
           <caret line="450" column="9" selection-start-line="450" selection-start-column="9" selection-end-line="450" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/mapper/RoleMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11486486">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding />
         </state>
       </provider>
