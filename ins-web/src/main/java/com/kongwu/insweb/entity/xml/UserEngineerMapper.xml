@@ -2241,4 +2241,324 @@
       update_time = #{updateTime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=BIGINT}
   </update>
+  <resultMap id="BaseResultMap" type="com.kongwu.insweb.entity.UserEngineer">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="ruid" jdbcType="BIGINT" property="ruid" />
+    <result column="uid" jdbcType="BIGINT" property="uid" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="identity" jdbcType="VARCHAR" property="identity" />
+    <result column="identity_front_image" jdbcType="VARCHAR" property="identityFrontImage" />
+    <result column="identity_back_image" jdbcType="VARCHAR" property="identityBackImage" />
+    <result column="qualification_certificate_images" jdbcType="VARCHAR" property="qualificationCertificateImages" />
+    <result column="introduction" jdbcType="VARCHAR" property="introduction" />
+    <result column="contact" jdbcType="VARCHAR" property="contact" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, ruid, uid, code, name, identity, identity_front_image, identity_back_image, qualification_certificate_images, 
+    introduction, contact, update_time
+  </sql>
+  <select id="selectByExample" parameterType="com.kongwu.insweb.entity.UserEngineerExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from user_engineer
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user_engineer
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from user_engineer
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.kongwu.insweb.entity.UserEngineerExample">
+    delete from user_engineer
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.kongwu.insweb.entity.UserEngineer">
+    insert into user_engineer (id, ruid, uid, code, 
+      name, identity, identity_front_image, 
+      identity_back_image, qualification_certificate_images, 
+      introduction, contact, update_time
+      )
+    values (#{id,jdbcType=BIGINT}, #{ruid,jdbcType=BIGINT}, #{uid,jdbcType=BIGINT}, #{code,jdbcType=VARCHAR}, 
+      #{name,jdbcType=VARCHAR}, #{identity,jdbcType=VARCHAR}, #{identityFrontImage,jdbcType=VARCHAR}, 
+      #{identityBackImage,jdbcType=VARCHAR}, #{qualificationCertificateImages,jdbcType=VARCHAR}, 
+      #{introduction,jdbcType=VARCHAR}, #{contact,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.kongwu.insweb.entity.UserEngineer">
+    insert into user_engineer
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="ruid != null">
+        ruid,
+      </if>
+      <if test="uid != null">
+        uid,
+      </if>
+      <if test="code != null">
+        code,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="identity != null">
+        identity,
+      </if>
+      <if test="identityFrontImage != null">
+        identity_front_image,
+      </if>
+      <if test="identityBackImage != null">
+        identity_back_image,
+      </if>
+      <if test="qualificationCertificateImages != null">
+        qualification_certificate_images,
+      </if>
+      <if test="introduction != null">
+        introduction,
+      </if>
+      <if test="contact != null">
+        contact,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="ruid != null">
+        #{ruid,jdbcType=BIGINT},
+      </if>
+      <if test="uid != null">
+        #{uid,jdbcType=BIGINT},
+      </if>
+      <if test="code != null">
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="identity != null">
+        #{identity,jdbcType=VARCHAR},
+      </if>
+      <if test="identityFrontImage != null">
+        #{identityFrontImage,jdbcType=VARCHAR},
+      </if>
+      <if test="identityBackImage != null">
+        #{identityBackImage,jdbcType=VARCHAR},
+      </if>
+      <if test="qualificationCertificateImages != null">
+        #{qualificationCertificateImages,jdbcType=VARCHAR},
+      </if>
+      <if test="introduction != null">
+        #{introduction,jdbcType=VARCHAR},
+      </if>
+      <if test="contact != null">
+        #{contact,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.kongwu.insweb.entity.UserEngineerExample" resultType="java.lang.Integer">
+    select count(*) from user_engineer
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update user_engineer
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.ruid != null">
+        ruid = #{record.ruid,jdbcType=BIGINT},
+      </if>
+      <if test="record.uid != null">
+        uid = #{record.uid,jdbcType=BIGINT},
+      </if>
+      <if test="record.code != null">
+        code = #{record.code,jdbcType=VARCHAR},
+      </if>
+      <if test="record.name != null">
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.identity != null">
+        identity = #{record.identity,jdbcType=VARCHAR},
+      </if>
+      <if test="record.identityFrontImage != null">
+        identity_front_image = #{record.identityFrontImage,jdbcType=VARCHAR},
+      </if>
+      <if test="record.identityBackImage != null">
+        identity_back_image = #{record.identityBackImage,jdbcType=VARCHAR},
+      </if>
+      <if test="record.qualificationCertificateImages != null">
+        qualification_certificate_images = #{record.qualificationCertificateImages,jdbcType=VARCHAR},
+      </if>
+      <if test="record.introduction != null">
+        introduction = #{record.introduction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.contact != null">
+        contact = #{record.contact,jdbcType=VARCHAR},
+      </if>
+      <if test="record.updateTime != null">
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update user_engineer
+    set id = #{record.id,jdbcType=BIGINT},
+      ruid = #{record.ruid,jdbcType=BIGINT},
+      uid = #{record.uid,jdbcType=BIGINT},
+      code = #{record.code,jdbcType=VARCHAR},
+      name = #{record.name,jdbcType=VARCHAR},
+      identity = #{record.identity,jdbcType=VARCHAR},
+      identity_front_image = #{record.identityFrontImage,jdbcType=VARCHAR},
+      identity_back_image = #{record.identityBackImage,jdbcType=VARCHAR},
+      qualification_certificate_images = #{record.qualificationCertificateImages,jdbcType=VARCHAR},
+      introduction = #{record.introduction,jdbcType=VARCHAR},
+      contact = #{record.contact,jdbcType=VARCHAR},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.kongwu.insweb.entity.UserEngineer">
+    update user_engineer
+    <set>
+      <if test="ruid != null">
+        ruid = #{ruid,jdbcType=BIGINT},
+      </if>
+      <if test="uid != null">
+        uid = #{uid,jdbcType=BIGINT},
+      </if>
+      <if test="code != null">
+        code = #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="identity != null">
+        identity = #{identity,jdbcType=VARCHAR},
+      </if>
+      <if test="identityFrontImage != null">
+        identity_front_image = #{identityFrontImage,jdbcType=VARCHAR},
+      </if>
+      <if test="identityBackImage != null">
+        identity_back_image = #{identityBackImage,jdbcType=VARCHAR},
+      </if>
+      <if test="qualificationCertificateImages != null">
+        qualification_certificate_images = #{qualificationCertificateImages,jdbcType=VARCHAR},
+      </if>
+      <if test="introduction != null">
+        introduction = #{introduction,jdbcType=VARCHAR},
+      </if>
+      <if test="contact != null">
+        contact = #{contact,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.kongwu.insweb.entity.UserEngineer">
+    update user_engineer
+    set ruid = #{ruid,jdbcType=BIGINT},
+      uid = #{uid,jdbcType=BIGINT},
+      code = #{code,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      identity = #{identity,jdbcType=VARCHAR},
+      identity_front_image = #{identityFrontImage,jdbcType=VARCHAR},
+      identity_back_image = #{identityBackImage,jdbcType=VARCHAR},
+      qualification_certificate_images = #{qualificationCertificateImages,jdbcType=VARCHAR},
+      introduction = #{introduction,jdbcType=VARCHAR},
+      contact = #{contact,jdbcType=VARCHAR},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
 </mapper>

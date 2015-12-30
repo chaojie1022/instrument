@@ -1296,4 +1296,189 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
+  <resultMap id="BaseResultMap" type="com.kongwu.insweb.entity.OrderPartsRel">
+    <result column="id" jdbcType="BIGINT" property="id" />
+    <result column="order_id" jdbcType="BIGINT" property="orderId" />
+    <result column="parts_id" jdbcType="BIGINT" property="partsId" />
+    <result column="instrument_id" jdbcType="BIGINT" property="instrumentId" />
+    <result column="customer_asset_id" jdbcType="BIGINT" property="customerAssetId" />
+    <result column="amount" jdbcType="INTEGER" property="amount" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, order_id, parts_id, instrument_id, customer_asset_id, amount
+  </sql>
+  <select id="selectByExample" parameterType="com.kongwu.insweb.entity.OrderPartsRelExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from order_parts_rel
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <delete id="deleteByExample" parameterType="com.kongwu.insweb.entity.OrderPartsRelExample">
+    delete from order_parts_rel
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.kongwu.insweb.entity.OrderPartsRel">
+    insert into order_parts_rel (id, order_id, parts_id, 
+      instrument_id, customer_asset_id, amount
+      )
+    values (#{id,jdbcType=BIGINT}, #{orderId,jdbcType=BIGINT}, #{partsId,jdbcType=BIGINT}, 
+      #{instrumentId,jdbcType=BIGINT}, #{customerAssetId,jdbcType=BIGINT}, #{amount,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.kongwu.insweb.entity.OrderPartsRel">
+    insert into order_parts_rel
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="orderId != null">
+        order_id,
+      </if>
+      <if test="partsId != null">
+        parts_id,
+      </if>
+      <if test="instrumentId != null">
+        instrument_id,
+      </if>
+      <if test="customerAssetId != null">
+        customer_asset_id,
+      </if>
+      <if test="amount != null">
+        amount,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="orderId != null">
+        #{orderId,jdbcType=BIGINT},
+      </if>
+      <if test="partsId != null">
+        #{partsId,jdbcType=BIGINT},
+      </if>
+      <if test="instrumentId != null">
+        #{instrumentId,jdbcType=BIGINT},
+      </if>
+      <if test="customerAssetId != null">
+        #{customerAssetId,jdbcType=BIGINT},
+      </if>
+      <if test="amount != null">
+        #{amount,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.kongwu.insweb.entity.OrderPartsRelExample" resultType="java.lang.Integer">
+    select count(*) from order_parts_rel
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update order_parts_rel
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.orderId != null">
+        order_id = #{record.orderId,jdbcType=BIGINT},
+      </if>
+      <if test="record.partsId != null">
+        parts_id = #{record.partsId,jdbcType=BIGINT},
+      </if>
+      <if test="record.instrumentId != null">
+        instrument_id = #{record.instrumentId,jdbcType=BIGINT},
+      </if>
+      <if test="record.customerAssetId != null">
+        customer_asset_id = #{record.customerAssetId,jdbcType=BIGINT},
+      </if>
+      <if test="record.amount != null">
+        amount = #{record.amount,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update order_parts_rel
+    set id = #{record.id,jdbcType=BIGINT},
+      order_id = #{record.orderId,jdbcType=BIGINT},
+      parts_id = #{record.partsId,jdbcType=BIGINT},
+      instrument_id = #{record.instrumentId,jdbcType=BIGINT},
+      customer_asset_id = #{record.customerAssetId,jdbcType=BIGINT},
+      amount = #{record.amount,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
 </mapper>

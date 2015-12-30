@@ -2,7 +2,7 @@ package com.kongwu.insweb.entity;
 
 import java.util.Date;
 
-public class userAdmin {
+public class UserAdmin {
     private Long id;
 
     private Long ruid;

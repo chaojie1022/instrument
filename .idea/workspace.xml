@@ -1,8 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ff79680b-fc45-49bf-86d0-b9c36ef55843" name="Default" comment="">
+    <list default="true" id="ff79680b-fc45-49bf-86d0-b9c36ef55843" name="Default" comment="环境搭建">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/userAdmin.java" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/userAdmin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/userAdminExample.java" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/userAdminExample.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/CustomerAssetsMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/CustomerAssetsMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/InstrumentCategroyMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/InstrumentCategroyMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/InstrumentMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/InstrumentMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/InstrumentPartsCategroyMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/InstrumentPartsCategroyMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/InstrumentPartsMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/InstrumentPartsMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/OrderInstrumentMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/OrderInstrumentMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/OrderMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/OrderMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/OrderPartsRelMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/OrderPartsRelMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/RoleMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/RoleMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/RoleUserRelMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/RoleUserRelMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/ServiceMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/ServiceMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserCustomerMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserCustomerMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserEngineerMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserEngineerMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserInfoMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserInfoMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserOperatorMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserOperatorMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserServiceEnterpriseEmployeeMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserServiceEnterpriseEmployeeMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserServiceEnterpriseMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserServiceEnterpriseMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/WorkOrderMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/WorkOrderMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/userAdminMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/userAdminMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/mapper/RoleMapper.java" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/mapper/RoleMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/mapper/userAdminMapper.java" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/mapper/userAdminMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/resources/generatorConfig.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/resources/generatorConfig.xml" />
     </list>
     <ignored path="instrument.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,116 +53,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ins-web/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-27.538462">
-              <caret line="249" column="22" selection-start-line="249" selection-start-column="22" selection-end-line="249" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SecurityService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/service/SecurityService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="67" selection-start-line="22" selection-start-column="67" selection-end-line="22" selection-end-column="67" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Role.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/Role.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0050675673">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RoleMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/mapper/RoleMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RoleExample.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/RoleExample.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="450" column="9" selection-start-line="450" selection-start-column="9" selection-end-line="450" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RoleMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/RoleMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-40.73077">
-              <caret line="244" column="10" selection-start-line="244" selection-start-column="10" selection-end-line="244" selection-end-column="10" />
-              <folding>
-                <marker date="1451459346974" expanded="true" signature="3828:3927" placeholder="select from ..role..." />
-                <marker date="1451459346974" expanded="true" signature="4011:4064" placeholder="delete from ..." />
-                <marker date="1451459346974" expanded="true" signature="4167:4183" placeholder="delete from ..." />
-                <marker date="1451459346974" expanded="true" signature="4363:4730" placeholder="insert into role..." />
-                <marker date="1451459346974" expanded="true" signature="6304:6329" placeholder="select count..role..." />
-                <marker date="1451459346974" expanded="true" signature="7577:8011" placeholder="update role ..." />
-                <marker date="1451459346974" expanded="true" signature="8222:8972" placeholder="update role ..." />
-                <marker date="1451459346974" expanded="true" signature="9071:9452" placeholder="update role ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserExample.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/UserExample.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="597" column="32" selection-start-line="597" selection-start-column="32" selection-end-line="597" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserRealm.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/realm/UserRealm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="52" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="generatorConfig.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="generatorConfig.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ins-web/src/main/resources/generatorConfig.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.65384614">
-              <caret line="71" column="71" selection-start-line="71" selection-start-column="71" selection-end-line="71" selection-end-column="71" />
+            <state vertical-scroll-proportion="0.45224395">
+              <caret line="116" column="59" selection-start-line="116" selection-start-column="59" selection-end-line="116" selection-end-column="59" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Autowired.java" pinned="false" current-in-tab="false">
-        <entry file="jar://D:/repository/org/springframework/spring-beans/4.2.2.RELEASE/spring-beans-4.2.2.RELEASE-sources.jar!/org/springframework/beans/factory/annotation/Autowired.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#3176#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -210,8 +131,8 @@
         <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/service/SecurityService.java" />
         <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/realm/UserRealm.java" />
         <option value="$PROJECT_DIR$/ins-web/pom.xml" />
-        <option value="$PROJECT_DIR$/ins-web/src/main/resources/generatorConfig.xml" />
         <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/UserExample.java" />
+        <option value="$PROJECT_DIR$/ins-web/src/main/resources/generatorConfig.xml" />
       </list>
     </option>
   </component>
@@ -357,7 +278,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -366,214 +286,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ins-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ins-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ins-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ins-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ins-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="insweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ins-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="insweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ins-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="insweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1086,7 +803,8 @@
       <workItem from="1451437606450" duration="5474000" />
       <workItem from="1451450262771" duration="94000" />
       <workItem from="1451450368051" duration="760000" />
-      <workItem from="1451451134316" duration="9613000" />
+      <workItem from="1451451134316" duration="12111000" />
+      <workItem from="1451466711475" duration="1373000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1451459797399</created>
@@ -1112,11 +830,17 @@
       <option name="project" value="LOCAL" />
       <updated>1451460763112</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="环境搭建">
+      <created>1451460769357</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1451460769357</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30256000" />
+    <option name="totallyTimeSpent" value="34127000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1133,30 +857,30 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2793177" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32792208" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25586355" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13744588" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13744588" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32792208" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1214,52 +938,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/controller/login/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/freemarker/MyFreeMarkerView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2037037">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/ImgUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="90" column="15" selection-start-line="90" selection-start-column="15" selection-end-line="90" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <marker date="1451446106578" expanded="true" signature="861:1356" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/webapp/assets/app/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20964126">
-          <caret line="11" column="26" selection-start-line="0" selection-start-column="0" selection-end-line="81" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ins-web/src/main/webapp/WEB-INF/views/login.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1267,7 +949,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7722" column="19" selection-start-line="7722" selection-start-column="16" selection-end-line="7722" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1289,7 +970,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1297,7 +977,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23085847">
           <caret line="406" column="0" selection-start-line="406" selection-start-column="0" selection-end-line="406" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1305,7 +984,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1313,7 +991,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1329,7 +1006,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1337,7 +1013,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1345,7 +1020,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1353,7 +1027,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1369,7 +1042,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1389,19 +1061,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/resources/spring-config-cache.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.2037036">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/credentials/RetryLimitHashedCredentialsMatcher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1409,10 +1072,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.9457831">
           <caret line="86" column="45" selection-start-line="86" selection-start-column="45" selection-end-line="86" selection-end-column="45" />
-          <folding>
-            <element signature="e#3415#3416#0" expanded="true" />
-            <element signature="e#3462#3463#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1420,7 +1079,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.642857">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1444,56 +1102,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-505.42307">
           <caret line="1433" column="83" selection-start-line="1433" selection-start-column="83" selection-end-line="1433" selection-end-column="83" />
-          <folding>
-            <marker date="1451459347083" expanded="true" signature="12181:12286" placeholder="select from ..user_admin..." />
-            <marker date="1451459347083" expanded="true" signature="12369:12428" placeholder="delete from ..." />
-            <marker date="1451459347083" expanded="true" signature="12535:12557" placeholder="delete from ..." />
-            <marker date="1451459347083" expanded="true" signature="12740:13048" placeholder="insert into user_admin..." />
-            <marker date="1451459347083" expanded="true" signature="14425:14456" placeholder="select count..user_admin..." />
-            <marker date="1451459347083" expanded="true" signature="15553:15914" placeholder="update user_..." />
-            <marker date="1451459347083" expanded="true" signature="16128:16746" placeholder="update user_..." />
-            <marker date="1451459347083" expanded="true" signature="16849:17164" placeholder="update user_..." />
-            <marker date="1451459347083" expanded="true" signature="20665:20770" placeholder="select from ..user_admin..." />
-            <marker date="1451459347083" expanded="true" signature="20853:20912" placeholder="delete from ..." />
-            <marker date="1451459347083" expanded="true" signature="21019:21041" placeholder="delete from ..." />
-            <marker date="1451459347083" expanded="true" signature="21224:21532" placeholder="insert into user_admin..." />
-            <marker date="1451459347083" expanded="true" signature="22909:22940" placeholder="select count..user_admin..." />
-            <marker date="1451459347083" expanded="true" signature="24037:24398" placeholder="update user_..." />
-            <marker date="1451459347083" expanded="true" signature="24612:25230" placeholder="update user_..." />
-            <marker date="1451459347083" expanded="true" signature="25333:25648" placeholder="update user_..." />
-            <marker date="1451459347083" expanded="true" signature="29149:29254" placeholder="select from ..user_admin..." />
-            <marker date="1451459347083" expanded="true" signature="29337:29396" placeholder="delete from ..." />
-            <marker date="1451459347083" expanded="true" signature="29503:29525" placeholder="delete from ..." />
-            <marker date="1451459347083" expanded="true" signature="29708:30016" placeholder="insert into user_admin..." />
-            <marker date="1451459347083" expanded="true" signature="31393:31424" placeholder="select count..user_admin..." />
-            <marker date="1451459347083" expanded="true" signature="32521:32882" placeholder="update user_..." />
-            <marker date="1451459347083" expanded="true" signature="33096:33714" placeholder="update user_..." />
-            <marker date="1451459347083" expanded="true" signature="33817:34132" placeholder="update user_..." />
-            <marker date="1451459347083" expanded="true" signature="37633:37738" placeholder="select from ..user_admin..." />
-            <marker date="1451459347083" expanded="true" signature="37821:37880" placeholder="delete from ..." />
-            <marker date="1451459347083" expanded="true" signature="37987:38009" placeholder="delete from ..." />
-            <marker date="1451459347083" expanded="true" signature="38192:38500" placeholder="insert into user_admin..." />
-            <marker date="1451459347083" expanded="true" signature="39877:39908" placeholder="select count..user_admin..." />
-            <marker date="1451459347083" expanded="true" signature="41005:41366" placeholder="update user_..." />
-            <marker date="1451459347083" expanded="true" signature="41580:42198" placeholder="update user_..." />
-            <marker date="1451459347083" expanded="true" signature="42301:42616" placeholder="update user_..." />
-            <marker date="1451459347083" expanded="true" signature="46117:46222" placeholder="select from ..user_admin..." />
-            <marker date="1451459347083" expanded="true" signature="46305:46364" placeholder="delete from ..." />
-            <marker date="1451459347083" expanded="true" signature="46471:46493" placeholder="delete from ..." />
-            <marker date="1451459347083" expanded="true" signature="46676:46984" placeholder="insert into user_admin..." />
-            <marker date="1451459347083" expanded="true" signature="48361:48392" placeholder="select count..user_admin..." />
-            <marker date="1451459347083" expanded="true" signature="49489:49850" placeholder="update user_..." />
-            <marker date="1451459347083" expanded="true" signature="50064:50682" placeholder="update user_..." />
-            <marker date="1451459347083" expanded="true" signature="50785:51100" placeholder="update user_..." />
-            <marker date="1451459347083" expanded="true" signature="54601:54706" placeholder="select from ..user_admin..." />
-            <marker date="1451459347083" expanded="true" signature="54789:54848" placeholder="delete from ..." />
-            <marker date="1451459347083" expanded="true" signature="54955:54977" placeholder="delete from ..." />
-            <marker date="1451459347083" expanded="true" signature="55160:55468" placeholder="insert into user_admin..." />
-            <marker date="1451459347083" expanded="true" signature="56845:56876" placeholder="select count..user_admin..." />
-            <marker date="1451459347083" expanded="true" signature="57973:58334" placeholder="update user_..." />
-            <marker date="1451459347083" expanded="true" signature="58548:59166" placeholder="update user_..." />
-            <marker date="1451459347083" expanded="true" signature="59269:59584" placeholder="update user_..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1525,7 +1133,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1533,7 +1140,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="51" column="26" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1567,7 +1173,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1575,7 +1180,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="12.576271">
           <caret line="369" column="43" selection-start-line="369" selection-start-column="25" selection-end-line="369" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1583,13 +1187,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#432#433#0" expanded="false" />
-            <element signature="e#473#474#0" expanded="false" />
-            <element signature="e#615#616#0" expanded="false" />
-            <element signature="e#656#657#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1603,44 +1200,15 @@
     </entry>
     <entry file="jar://D:/repository/org/springframework/spring-beans/4.2.2.RELEASE/spring-beans-4.2.2.RELEASE-sources.jar!/org/springframework/beans/factory/annotation/Autowired.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.7150838">
           <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#3176#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/resources/generatorConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65384614">
-          <caret line="71" column="71" selection-start-line="71" selection-start-column="71" selection-end-line="71" selection-end-column="71" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/realm/UserRealm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.4178771">
           <caret line="30" column="52" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-27.538462">
-          <caret line="249" column="22" selection-start-line="249" selection-start-column="22" selection-end-line="249" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/UserExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="597" column="32" selection-start-line="597" selection-start-column="32" selection-end-line="597" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1648,9 +1216,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="67" selection-start-line="22" selection-start-column="67" selection-end-line="22" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1658,16 +1223,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-40.73077">
           <caret line="244" column="10" selection-start-line="244" selection-start-column="10" selection-end-line="244" selection-end-column="10" />
-          <folding>
-            <marker date="1451459346974" expanded="true" signature="3828:3927" placeholder="select from ..role..." />
-            <marker date="1451459346974" expanded="true" signature="4011:4064" placeholder="delete from ..." />
-            <marker date="1451459346974" expanded="true" signature="4167:4183" placeholder="delete from ..." />
-            <marker date="1451459346974" expanded="true" signature="4363:4730" placeholder="insert into role..." />
-            <marker date="1451459346974" expanded="true" signature="6304:6329" placeholder="select count..role..." />
-            <marker date="1451459346974" expanded="true" signature="7577:8011" placeholder="update role ..." />
-            <marker date="1451459346974" expanded="true" signature="8222:8972" placeholder="update role ..." />
-            <marker date="1451459346974" expanded="true" signature="9071:9452" placeholder="update role ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1689,8 +1244,80 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/Role.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0050675673">
+        <state vertical-scroll-proportion="0.0">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/UserExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.7452514">
+          <caret line="597" column="32" selection-start-line="597" selection-start-column="32" selection-end-line="597" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-162.8077">
+          <caret line="249" column="22" selection-start-line="249" selection-start-column="22" selection-end-line="249" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/resources/resources.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/resources/spring-config-cache.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/repository/org/apache/shiro/shiro-core/1.2.4/shiro-core-1.2.4.jar!/org/apache/shiro/realm/AuthorizingRealm.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.9285715">
+          <caret line="58" column="38" selection-start-line="58" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/repository/org/apache/shiro/shiro-core/1.2.4/shiro-core-1.2.4.jar!/org/apache/shiro/authz/Authorizer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.285714">
+          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/repository/org/apache/shiro/shiro-core/1.2.4/shiro-core-1.2.4.jar!/org/apache/shiro/mgt/AuthorizingSecurityManager.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.0357144">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/UserRealm.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.464286">
+          <caret line="10" column="36" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/resources/generatorConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45224395">
+          <caret line="116" column="59" selection-start-line="116" selection-start-column="59" selection-end-line="116" selection-end-column="59" />
           <folding />
         </state>
       </provider>

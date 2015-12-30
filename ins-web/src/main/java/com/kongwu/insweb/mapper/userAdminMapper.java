@@ -1,30 +1,30 @@
 package com.kongwu.insweb.mapper;
 
-import com.kongwu.insweb.entity.userAdmin;
-import com.kongwu.insweb.entity.userAdminExample;
+import com.kongwu.insweb.entity.UserAdmin;
+import com.kongwu.insweb.entity.UserAdminExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
-public interface userAdminMapper {
-    int countByExample(userAdminExample example);
+public interface UserAdminMapper {
+    int countByExample(UserAdminExample example);
 
-    int deleteByExample(userAdminExample example);
+    int deleteByExample(UserAdminExample example);
 
     int deleteByPrimaryKey(Long id);
 
-    int insert(userAdmin record);
+    int insert(UserAdmin record);
 
-    int insertSelective(userAdmin record);
+    int insertSelective(UserAdmin record);
 
-    List<userAdmin> selectByExample(userAdminExample example);
+    List<UserAdmin> selectByExample(UserAdminExample example);
 
-    userAdmin selectByPrimaryKey(Long id);
+    UserAdmin selectByPrimaryKey(Long id);
 
-    int updateByExampleSelective(@Param("record") userAdmin record, @Param("example") userAdminExample example);
+    int updateByExampleSelective(@Param("record") UserAdmin record, @Param("example") UserAdminExample example);
 
-    int updateByExample(@Param("record") userAdmin record, @Param("example") userAdminExample example);
+    int updateByExample(@Param("record") UserAdmin record, @Param("example") UserAdminExample example);
 
-    int updateByPrimaryKeySelective(userAdmin record);
+    int updateByPrimaryKeySelective(UserAdmin record);
 
-    int updateByPrimaryKey(userAdmin record);
+    int updateByPrimaryKey(UserAdmin record);
 }
