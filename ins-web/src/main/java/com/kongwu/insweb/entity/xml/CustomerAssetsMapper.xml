@@ -2127,6 +2127,308 @@
   <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.kongwu.insweb.entity.CustomerAssets">
     <result column="maintaining_record" jdbcType="LONGVARCHAR" property="maintainingRecord" />
   </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, ruid, uid, instrument_id, instrument_asset_code, start_use_date, descrption
+  </sql>
+  <sql id="Blob_Column_List">
+    maintaining_record
+  </sql>
+  <select id="selectByExampleWithBLOBs" parameterType="com.kongwu.insweb.entity.CustomerAssetsExample" resultMap="ResultMapWithBLOBs">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from customer_assets
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExample" parameterType="com.kongwu.insweb.entity.CustomerAssetsExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from customer_assets
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from customer_assets
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from customer_assets
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.kongwu.insweb.entity.CustomerAssetsExample">
+    delete from customer_assets
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.kongwu.insweb.entity.CustomerAssets">
+    insert into customer_assets (id, ruid, uid, instrument_id, 
+      instrument_asset_code, start_use_date, descrption, 
+      maintaining_record)
+    values (#{id,jdbcType=BIGINT}, #{ruid,jdbcType=BIGINT}, #{uid,jdbcType=BIGINT}, #{instrumentId,jdbcType=BIGINT}, 
+      #{instrumentAssetCode,jdbcType=VARCHAR}, #{startUseDate,jdbcType=TIMESTAMP}, #{descrption,jdbcType=VARCHAR}, 
+      #{maintainingRecord,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.kongwu.insweb.entity.CustomerAssets">
+    insert into customer_assets
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="ruid != null">
+        ruid,
+      </if>
+      <if test="uid != null">
+        uid,
+      </if>
+      <if test="instrumentId != null">
+        instrument_id,
+      </if>
+      <if test="instrumentAssetCode != null">
+        instrument_asset_code,
+      </if>
+      <if test="startUseDate != null">
+        start_use_date,
+      </if>
+      <if test="descrption != null">
+        descrption,
+      </if>
+      <if test="maintainingRecord != null">
+        maintaining_record,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="ruid != null">
+        #{ruid,jdbcType=BIGINT},
+      </if>
+      <if test="uid != null">
+        #{uid,jdbcType=BIGINT},
+      </if>
+      <if test="instrumentId != null">
+        #{instrumentId,jdbcType=BIGINT},
+      </if>
+      <if test="instrumentAssetCode != null">
+        #{instrumentAssetCode,jdbcType=VARCHAR},
+      </if>
+      <if test="startUseDate != null">
+        #{startUseDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="descrption != null">
+        #{descrption,jdbcType=VARCHAR},
+      </if>
+      <if test="maintainingRecord != null">
+        #{maintainingRecord,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.kongwu.insweb.entity.CustomerAssetsExample" resultType="java.lang.Integer">
+    select count(*) from customer_assets
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update customer_assets
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.ruid != null">
+        ruid = #{record.ruid,jdbcType=BIGINT},
+      </if>
+      <if test="record.uid != null">
+        uid = #{record.uid,jdbcType=BIGINT},
+      </if>
+      <if test="record.instrumentId != null">
+        instrument_id = #{record.instrumentId,jdbcType=BIGINT},
+      </if>
+      <if test="record.instrumentAssetCode != null">
+        instrument_asset_code = #{record.instrumentAssetCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.startUseDate != null">
+        start_use_date = #{record.startUseDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.descrption != null">
+        descrption = #{record.descrption,jdbcType=VARCHAR},
+      </if>
+      <if test="record.maintainingRecord != null">
+        maintaining_record = #{record.maintainingRecord,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map">
+    update customer_assets
+    set id = #{record.id,jdbcType=BIGINT},
+      ruid = #{record.ruid,jdbcType=BIGINT},
+      uid = #{record.uid,jdbcType=BIGINT},
+      instrument_id = #{record.instrumentId,jdbcType=BIGINT},
+      instrument_asset_code = #{record.instrumentAssetCode,jdbcType=VARCHAR},
+      start_use_date = #{record.startUseDate,jdbcType=TIMESTAMP},
+      descrption = #{record.descrption,jdbcType=VARCHAR},
+      maintaining_record = #{record.maintainingRecord,jdbcType=LONGVARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update customer_assets
+    set id = #{record.id,jdbcType=BIGINT},
+      ruid = #{record.ruid,jdbcType=BIGINT},
+      uid = #{record.uid,jdbcType=BIGINT},
+      instrument_id = #{record.instrumentId,jdbcType=BIGINT},
+      instrument_asset_code = #{record.instrumentAssetCode,jdbcType=VARCHAR},
+      start_use_date = #{record.startUseDate,jdbcType=TIMESTAMP},
+      descrption = #{record.descrption,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.kongwu.insweb.entity.CustomerAssets">
+    update customer_assets
+    <set>
+      <if test="ruid != null">
+        ruid = #{ruid,jdbcType=BIGINT},
+      </if>
+      <if test="uid != null">
+        uid = #{uid,jdbcType=BIGINT},
+      </if>
+      <if test="instrumentId != null">
+        instrument_id = #{instrumentId,jdbcType=BIGINT},
+      </if>
+      <if test="instrumentAssetCode != null">
+        instrument_asset_code = #{instrumentAssetCode,jdbcType=VARCHAR},
+      </if>
+      <if test="startUseDate != null">
+        start_use_date = #{startUseDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="descrption != null">
+        descrption = #{descrption,jdbcType=VARCHAR},
+      </if>
+      <if test="maintainingRecord != null">
+        maintaining_record = #{maintainingRecord,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.kongwu.insweb.entity.CustomerAssets">
+    update customer_assets
+    set ruid = #{ruid,jdbcType=BIGINT},
+      uid = #{uid,jdbcType=BIGINT},
+      instrument_id = #{instrumentId,jdbcType=BIGINT},
+      instrument_asset_code = #{instrumentAssetCode,jdbcType=VARCHAR},
+      start_use_date = #{startUseDate,jdbcType=TIMESTAMP},
+      descrption = #{descrption,jdbcType=VARCHAR},
+      maintaining_record = #{maintainingRecord,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.kongwu.insweb.entity.CustomerAssets">
+    update customer_assets
+    set ruid = #{ruid,jdbcType=BIGINT},
+      uid = #{uid,jdbcType=BIGINT},
+      instrument_id = #{instrumentId,jdbcType=BIGINT},
+      instrument_asset_code = #{instrumentAssetCode,jdbcType=VARCHAR},
+      start_use_date = #{startUseDate,jdbcType=TIMESTAMP},
+      descrption = #{descrption,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <resultMap id="BaseResultMap" type="com.kongwu.insweb.entity.CustomerAssets">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="ruid" jdbcType="BIGINT" property="ruid" />
+    <result column="uid" jdbcType="BIGINT" property="uid" />
+    <result column="instrument_id" jdbcType="BIGINT" property="instrumentId" />
+    <result column="instrument_asset_code" jdbcType="VARCHAR" property="instrumentAssetCode" />
+    <result column="start_use_date" jdbcType="TIMESTAMP" property="startUseDate" />
+    <result column="descrption" jdbcType="VARCHAR" property="descrption" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.kongwu.insweb.entity.CustomerAssets">
+    <result column="maintaining_record" jdbcType="LONGVARCHAR" property="maintainingRecord" />
+  </resultMap>
   <sql id="Base_Column_List">
     id, ruid, uid, instrument_id, instrument_asset_code, start_use_date, descrption
   </sql>

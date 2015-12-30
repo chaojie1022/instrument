@@ -1,0 +1,3304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kongwu.insweb.mapper.OrderMapper">
+  <resultMap id="BaseResultMap" type="com.kongwu.insweb.entity.Order">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="customer_id" jdbcType="BIGINT" property="customerId" />
+    <result column="server_type" jdbcType="VARCHAR" property="serverType" />
+    <result column="is_relate_assets" jdbcType="INTEGER" property="isRelateAssets" />
+    <result column="engineer_id" jdbcType="BIGINT" property="engineerId" />
+    <result column="enterprise_id" jdbcType="BIGINT" property="enterpriseId" />
+    <result column="enterprise_employees" jdbcType="VARCHAR" property="enterpriseEmployees" />
+    <result column="if_use_parts" jdbcType="INTEGER" property="ifUseParts" />
+    <result column="estimate_service_cost" jdbcType="BIGINT" property="estimateServiceCost" />
+    <result column="total_cost" jdbcType="BIGINT" property="totalCost" />
+    <result column="repair_cost" jdbcType="BIGINT" property="repairCost" />
+    <result column="parts_cost" jdbcType="BIGINT" property="partsCost" />
+    <result column="settlement_status" jdbcType="VARCHAR" property="settlementStatus" />
+    <result column="payed" jdbcType="BIGINT" property="payed" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="service_cycle" jdbcType="INTEGER" property="serviceCycle" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.kongwu.insweb.entity.OrderWithBLOBs">
+    <result column="instruments" jdbcType="LONGVARCHAR" property="instruments" />
+    <result column="parts_list" jdbcType="LONGVARCHAR" property="partsList" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, customer_id, server_type, is_relate_assets, engineer_id, enterprise_id, enterprise_employees, 
+    if_use_parts, estimate_service_cost, total_cost, repair_cost, parts_cost, settlement_status, 
+    payed, status, service_cycle, type, remark, create_time, update_time
+  </sql>
+  <sql id="Blob_Column_List">
+    instruments, parts_list
+  </sql>
+  <select id="selectByExampleWithBLOBs" parameterType="com.kongwu.insweb.entity.OrderExample" resultMap="ResultMapWithBLOBs">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from order
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExample" parameterType="com.kongwu.insweb.entity.OrderExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from order
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from order
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from order
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.kongwu.insweb.entity.OrderExample">
+    delete from order
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.kongwu.insweb.entity.OrderWithBLOBs">
+    insert into order (id, customer_id, server_type, 
+      is_relate_assets, engineer_id, enterprise_id, 
+      enterprise_employees, if_use_parts, estimate_service_cost, 
+      total_cost, repair_cost, parts_cost, 
+      settlement_status, payed, status, 
+      service_cycle, type, remark, 
+      create_time, update_time, instruments, 
+      parts_list)
+    values (#{id,jdbcType=BIGINT}, #{customerId,jdbcType=BIGINT}, #{serverType,jdbcType=VARCHAR}, 
+      #{isRelateAssets,jdbcType=INTEGER}, #{engineerId,jdbcType=BIGINT}, #{enterpriseId,jdbcType=BIGINT}, 
+      #{enterpriseEmployees,jdbcType=VARCHAR}, #{ifUseParts,jdbcType=INTEGER}, #{estimateServiceCost,jdbcType=BIGINT}, 
+      #{totalCost,jdbcType=BIGINT}, #{repairCost,jdbcType=BIGINT}, #{partsCost,jdbcType=BIGINT}, 
+      #{settlementStatus,jdbcType=VARCHAR}, #{payed,jdbcType=BIGINT}, #{status,jdbcType=VARCHAR}, 
+      #{serviceCycle,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{instruments,jdbcType=LONGVARCHAR}, 
+      #{partsList,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.kongwu.insweb.entity.OrderWithBLOBs">
+    insert into order
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="customerId != null">
+        customer_id,
+      </if>
+      <if test="serverType != null">
+        server_type,
+      </if>
+      <if test="isRelateAssets != null">
+        is_relate_assets,
+      </if>
+      <if test="engineerId != null">
+        engineer_id,
+      </if>
+      <if test="enterpriseId != null">
+        enterprise_id,
+      </if>
+      <if test="enterpriseEmployees != null">
+        enterprise_employees,
+      </if>
+      <if test="ifUseParts != null">
+        if_use_parts,
+      </if>
+      <if test="estimateServiceCost != null">
+        estimate_service_cost,
+      </if>
+      <if test="totalCost != null">
+        total_cost,
+      </if>
+      <if test="repairCost != null">
+        repair_cost,
+      </if>
+      <if test="partsCost != null">
+        parts_cost,
+      </if>
+      <if test="settlementStatus != null">
+        settlement_status,
+      </if>
+      <if test="payed != null">
+        payed,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="serviceCycle != null">
+        service_cycle,
+      </if>
+      <if test="type != null">
+        type,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="instruments != null">
+        instruments,
+      </if>
+      <if test="partsList != null">
+        parts_list,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="customerId != null">
+        #{customerId,jdbcType=BIGINT},
+      </if>
+      <if test="serverType != null">
+        #{serverType,jdbcType=VARCHAR},
+      </if>
+      <if test="isRelateAssets != null">
+        #{isRelateAssets,jdbcType=INTEGER},
+      </if>
+      <if test="engineerId != null">
+        #{engineerId,jdbcType=BIGINT},
+      </if>
+      <if test="enterpriseId != null">
+        #{enterpriseId,jdbcType=BIGINT},
+      </if>
+      <if test="enterpriseEmployees != null">
+        #{enterpriseEmployees,jdbcType=VARCHAR},
+      </if>
+      <if test="ifUseParts != null">
+        #{ifUseParts,jdbcType=INTEGER},
+      </if>
+      <if test="estimateServiceCost != null">
+        #{estimateServiceCost,jdbcType=BIGINT},
+      </if>
+      <if test="totalCost != null">
+        #{totalCost,jdbcType=BIGINT},
+      </if>
+      <if test="repairCost != null">
+        #{repairCost,jdbcType=BIGINT},
+      </if>
+      <if test="partsCost != null">
+        #{partsCost,jdbcType=BIGINT},
+      </if>
+      <if test="settlementStatus != null">
+        #{settlementStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="payed != null">
+        #{payed,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="serviceCycle != null">
+        #{serviceCycle,jdbcType=INTEGER},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="instruments != null">
+        #{instruments,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="partsList != null">
+        #{partsList,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.kongwu.insweb.entity.OrderExample" resultType="java.lang.Integer">
+    select count(*) from order
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update order
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.customerId != null">
+        customer_id = #{record.customerId,jdbcType=BIGINT},
+      </if>
+      <if test="record.serverType != null">
+        server_type = #{record.serverType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isRelateAssets != null">
+        is_relate_assets = #{record.isRelateAssets,jdbcType=INTEGER},
+      </if>
+      <if test="record.engineerId != null">
+        engineer_id = #{record.engineerId,jdbcType=BIGINT},
+      </if>
+      <if test="record.enterpriseId != null">
+        enterprise_id = #{record.enterpriseId,jdbcType=BIGINT},
+      </if>
+      <if test="record.enterpriseEmployees != null">
+        enterprise_employees = #{record.enterpriseEmployees,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ifUseParts != null">
+        if_use_parts = #{record.ifUseParts,jdbcType=INTEGER},
+      </if>
+      <if test="record.estimateServiceCost != null">
+        estimate_service_cost = #{record.estimateServiceCost,jdbcType=BIGINT},
+      </if>
+      <if test="record.totalCost != null">
+        total_cost = #{record.totalCost,jdbcType=BIGINT},
+      </if>
+      <if test="record.repairCost != null">
+        repair_cost = #{record.repairCost,jdbcType=BIGINT},
+      </if>
+      <if test="record.partsCost != null">
+        parts_cost = #{record.partsCost,jdbcType=BIGINT},
+      </if>
+      <if test="record.settlementStatus != null">
+        settlement_status = #{record.settlementStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="record.payed != null">
+        payed = #{record.payed,jdbcType=BIGINT},
+      </if>
+      <if test="record.status != null">
+        status = #{record.status,jdbcType=VARCHAR},
+      </if>
+      <if test="record.serviceCycle != null">
+        service_cycle = #{record.serviceCycle,jdbcType=INTEGER},
+      </if>
+      <if test="record.type != null">
+        type = #{record.type,jdbcType=VARCHAR},
+      </if>
+      <if test="record.remark != null">
+        remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateTime != null">
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.instruments != null">
+        instruments = #{record.instruments,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.partsList != null">
+        parts_list = #{record.partsList,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map">
+    update order
+    set id = #{record.id,jdbcType=BIGINT},
+      customer_id = #{record.customerId,jdbcType=BIGINT},
+      server_type = #{record.serverType,jdbcType=VARCHAR},
+      is_relate_assets = #{record.isRelateAssets,jdbcType=INTEGER},
+      engineer_id = #{record.engineerId,jdbcType=BIGINT},
+      enterprise_id = #{record.enterpriseId,jdbcType=BIGINT},
+      enterprise_employees = #{record.enterpriseEmployees,jdbcType=VARCHAR},
+      if_use_parts = #{record.ifUseParts,jdbcType=INTEGER},
+      estimate_service_cost = #{record.estimateServiceCost,jdbcType=BIGINT},
+      total_cost = #{record.totalCost,jdbcType=BIGINT},
+      repair_cost = #{record.repairCost,jdbcType=BIGINT},
+      parts_cost = #{record.partsCost,jdbcType=BIGINT},
+      settlement_status = #{record.settlementStatus,jdbcType=VARCHAR},
+      payed = #{record.payed,jdbcType=BIGINT},
+      status = #{record.status,jdbcType=VARCHAR},
+      service_cycle = #{record.serviceCycle,jdbcType=INTEGER},
+      type = #{record.type,jdbcType=VARCHAR},
+      remark = #{record.remark,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      instruments = #{record.instruments,jdbcType=LONGVARCHAR},
+      parts_list = #{record.partsList,jdbcType=LONGVARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update order
+    set id = #{record.id,jdbcType=BIGINT},
+      customer_id = #{record.customerId,jdbcType=BIGINT},
+      server_type = #{record.serverType,jdbcType=VARCHAR},
+      is_relate_assets = #{record.isRelateAssets,jdbcType=INTEGER},
+      engineer_id = #{record.engineerId,jdbcType=BIGINT},
+      enterprise_id = #{record.enterpriseId,jdbcType=BIGINT},
+      enterprise_employees = #{record.enterpriseEmployees,jdbcType=VARCHAR},
+      if_use_parts = #{record.ifUseParts,jdbcType=INTEGER},
+      estimate_service_cost = #{record.estimateServiceCost,jdbcType=BIGINT},
+      total_cost = #{record.totalCost,jdbcType=BIGINT},
+      repair_cost = #{record.repairCost,jdbcType=BIGINT},
+      parts_cost = #{record.partsCost,jdbcType=BIGINT},
+      settlement_status = #{record.settlementStatus,jdbcType=VARCHAR},
+      payed = #{record.payed,jdbcType=BIGINT},
+      status = #{record.status,jdbcType=VARCHAR},
+      service_cycle = #{record.serviceCycle,jdbcType=INTEGER},
+      type = #{record.type,jdbcType=VARCHAR},
+      remark = #{record.remark,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.kongwu.insweb.entity.OrderWithBLOBs">
+    update order
+    <set>
+      <if test="customerId != null">
+        customer_id = #{customerId,jdbcType=BIGINT},
+      </if>
+      <if test="serverType != null">
+        server_type = #{serverType,jdbcType=VARCHAR},
+      </if>
+      <if test="isRelateAssets != null">
+        is_relate_assets = #{isRelateAssets,jdbcType=INTEGER},
+      </if>
+      <if test="engineerId != null">
+        engineer_id = #{engineerId,jdbcType=BIGINT},
+      </if>
+      <if test="enterpriseId != null">
+        enterprise_id = #{enterpriseId,jdbcType=BIGINT},
+      </if>
+      <if test="enterpriseEmployees != null">
+        enterprise_employees = #{enterpriseEmployees,jdbcType=VARCHAR},
+      </if>
+      <if test="ifUseParts != null">
+        if_use_parts = #{ifUseParts,jdbcType=INTEGER},
+      </if>
+      <if test="estimateServiceCost != null">
+        estimate_service_cost = #{estimateServiceCost,jdbcType=BIGINT},
+      </if>
+      <if test="totalCost != null">
+        total_cost = #{totalCost,jdbcType=BIGINT},
+      </if>
+      <if test="repairCost != null">
+        repair_cost = #{repairCost,jdbcType=BIGINT},
+      </if>
+      <if test="partsCost != null">
+        parts_cost = #{partsCost,jdbcType=BIGINT},
+      </if>
+      <if test="settlementStatus != null">
+        settlement_status = #{settlementStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="payed != null">
+        payed = #{payed,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="serviceCycle != null">
+        service_cycle = #{serviceCycle,jdbcType=INTEGER},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="instruments != null">
+        instruments = #{instruments,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="partsList != null">
+        parts_list = #{partsList,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.kongwu.insweb.entity.OrderWithBLOBs">
+    update order
+    set customer_id = #{customerId,jdbcType=BIGINT},
+      server_type = #{serverType,jdbcType=VARCHAR},
+      is_relate_assets = #{isRelateAssets,jdbcType=INTEGER},
+      engineer_id = #{engineerId,jdbcType=BIGINT},
+      enterprise_id = #{enterpriseId,jdbcType=BIGINT},
+      enterprise_employees = #{enterpriseEmployees,jdbcType=VARCHAR},
+      if_use_parts = #{ifUseParts,jdbcType=INTEGER},
+      estimate_service_cost = #{estimateServiceCost,jdbcType=BIGINT},
+      total_cost = #{totalCost,jdbcType=BIGINT},
+      repair_cost = #{repairCost,jdbcType=BIGINT},
+      parts_cost = #{partsCost,jdbcType=BIGINT},
+      settlement_status = #{settlementStatus,jdbcType=VARCHAR},
+      payed = #{payed,jdbcType=BIGINT},
+      status = #{status,jdbcType=VARCHAR},
+      service_cycle = #{serviceCycle,jdbcType=INTEGER},
+      type = #{type,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      instruments = #{instruments,jdbcType=LONGVARCHAR},
+      parts_list = #{partsList,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.kongwu.insweb.entity.Order">
+    update order
+    set customer_id = #{customerId,jdbcType=BIGINT},
+      server_type = #{serverType,jdbcType=VARCHAR},
+      is_relate_assets = #{isRelateAssets,jdbcType=INTEGER},
+      engineer_id = #{engineerId,jdbcType=BIGINT},
+      enterprise_id = #{enterpriseId,jdbcType=BIGINT},
+      enterprise_employees = #{enterpriseEmployees,jdbcType=VARCHAR},
+      if_use_parts = #{ifUseParts,jdbcType=INTEGER},
+      estimate_service_cost = #{estimateServiceCost,jdbcType=BIGINT},
+      total_cost = #{totalCost,jdbcType=BIGINT},
+      repair_cost = #{repairCost,jdbcType=BIGINT},
+      parts_cost = #{partsCost,jdbcType=BIGINT},
+      settlement_status = #{settlementStatus,jdbcType=VARCHAR},
+      payed = #{payed,jdbcType=BIGINT},
+      status = #{status,jdbcType=VARCHAR},
+      service_cycle = #{serviceCycle,jdbcType=INTEGER},
+      type = #{type,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <resultMap id="BaseResultMap" type="com.kongwu.insweb.entity.Order">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="customer_id" jdbcType="BIGINT" property="customerId" />
+    <result column="server_type" jdbcType="VARCHAR" property="serverType" />
+    <result column="is_relate_assets" jdbcType="INTEGER" property="isRelateAssets" />
+    <result column="engineer_id" jdbcType="BIGINT" property="engineerId" />
+    <result column="enterprise_id" jdbcType="BIGINT" property="enterpriseId" />
+    <result column="enterprise_employees" jdbcType="VARCHAR" property="enterpriseEmployees" />
+    <result column="if_use_parts" jdbcType="INTEGER" property="ifUseParts" />
+    <result column="estimate_service_cost" jdbcType="BIGINT" property="estimateServiceCost" />
+    <result column="total_cost" jdbcType="BIGINT" property="totalCost" />
+    <result column="repair_cost" jdbcType="BIGINT" property="repairCost" />
+    <result column="parts_cost" jdbcType="BIGINT" property="partsCost" />
+    <result column="settlement_status" jdbcType="VARCHAR" property="settlementStatus" />
+    <result column="payed" jdbcType="BIGINT" property="payed" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="service_cycle" jdbcType="INTEGER" property="serviceCycle" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.kongwu.insweb.entity.OrderWithBLOBs">
+    <result column="instruments" jdbcType="LONGVARCHAR" property="instruments" />
+    <result column="parts_list" jdbcType="LONGVARCHAR" property="partsList" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, customer_id, server_type, is_relate_assets, engineer_id, enterprise_id, enterprise_employees, 
+    if_use_parts, estimate_service_cost, total_cost, repair_cost, parts_cost, settlement_status, 
+    payed, status, service_cycle, type, remark, create_time, update_time
+  </sql>
+  <sql id="Blob_Column_List">
+    instruments, parts_list
+  </sql>
+  <select id="selectByExampleWithBLOBs" parameterType="com.kongwu.insweb.entity.OrderExample" resultMap="ResultMapWithBLOBs">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from order
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExample" parameterType="com.kongwu.insweb.entity.OrderExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from order
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from order
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from order
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.kongwu.insweb.entity.OrderExample">
+    delete from order
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.kongwu.insweb.entity.OrderWithBLOBs">
+    insert into order (id, customer_id, server_type, 
+      is_relate_assets, engineer_id, enterprise_id, 
+      enterprise_employees, if_use_parts, estimate_service_cost, 
+      total_cost, repair_cost, parts_cost, 
+      settlement_status, payed, status, 
+      service_cycle, type, remark, 
+      create_time, update_time, instruments, 
+      parts_list)
+    values (#{id,jdbcType=BIGINT}, #{customerId,jdbcType=BIGINT}, #{serverType,jdbcType=VARCHAR}, 
+      #{isRelateAssets,jdbcType=INTEGER}, #{engineerId,jdbcType=BIGINT}, #{enterpriseId,jdbcType=BIGINT}, 
+      #{enterpriseEmployees,jdbcType=VARCHAR}, #{ifUseParts,jdbcType=INTEGER}, #{estimateServiceCost,jdbcType=BIGINT}, 
+      #{totalCost,jdbcType=BIGINT}, #{repairCost,jdbcType=BIGINT}, #{partsCost,jdbcType=BIGINT}, 
+      #{settlementStatus,jdbcType=VARCHAR}, #{payed,jdbcType=BIGINT}, #{status,jdbcType=VARCHAR}, 
+      #{serviceCycle,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{instruments,jdbcType=LONGVARCHAR}, 
+      #{partsList,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.kongwu.insweb.entity.OrderWithBLOBs">
+    insert into order
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="customerId != null">
+        customer_id,
+      </if>
+      <if test="serverType != null">
+        server_type,
+      </if>
+      <if test="isRelateAssets != null">
+        is_relate_assets,
+      </if>
+      <if test="engineerId != null">
+        engineer_id,
+      </if>
+      <if test="enterpriseId != null">
+        enterprise_id,
+      </if>
+      <if test="enterpriseEmployees != null">
+        enterprise_employees,
+      </if>
+      <if test="ifUseParts != null">
+        if_use_parts,
+      </if>
+      <if test="estimateServiceCost != null">
+        estimate_service_cost,
+      </if>
+      <if test="totalCost != null">
+        total_cost,
+      </if>
+      <if test="repairCost != null">
+        repair_cost,
+      </if>
+      <if test="partsCost != null">
+        parts_cost,
+      </if>
+      <if test="settlementStatus != null">
+        settlement_status,
+      </if>
+      <if test="payed != null">
+        payed,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="serviceCycle != null">
+        service_cycle,
+      </if>
+      <if test="type != null">
+        type,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="instruments != null">
+        instruments,
+      </if>
+      <if test="partsList != null">
+        parts_list,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="customerId != null">
+        #{customerId,jdbcType=BIGINT},
+      </if>
+      <if test="serverType != null">
+        #{serverType,jdbcType=VARCHAR},
+      </if>
+      <if test="isRelateAssets != null">
+        #{isRelateAssets,jdbcType=INTEGER},
+      </if>
+      <if test="engineerId != null">
+        #{engineerId,jdbcType=BIGINT},
+      </if>
+      <if test="enterpriseId != null">
+        #{enterpriseId,jdbcType=BIGINT},
+      </if>
+      <if test="enterpriseEmployees != null">
+        #{enterpriseEmployees,jdbcType=VARCHAR},
+      </if>
+      <if test="ifUseParts != null">
+        #{ifUseParts,jdbcType=INTEGER},
+      </if>
+      <if test="estimateServiceCost != null">
+        #{estimateServiceCost,jdbcType=BIGINT},
+      </if>
+      <if test="totalCost != null">
+        #{totalCost,jdbcType=BIGINT},
+      </if>
+      <if test="repairCost != null">
+        #{repairCost,jdbcType=BIGINT},
+      </if>
+      <if test="partsCost != null">
+        #{partsCost,jdbcType=BIGINT},
+      </if>
+      <if test="settlementStatus != null">
+        #{settlementStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="payed != null">
+        #{payed,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="serviceCycle != null">
+        #{serviceCycle,jdbcType=INTEGER},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="instruments != null">
+        #{instruments,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="partsList != null">
+        #{partsList,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.kongwu.insweb.entity.OrderExample" resultType="java.lang.Integer">
+    select count(*) from order
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update order
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.customerId != null">
+        customer_id = #{record.customerId,jdbcType=BIGINT},
+      </if>
+      <if test="record.serverType != null">
+        server_type = #{record.serverType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isRelateAssets != null">
+        is_relate_assets = #{record.isRelateAssets,jdbcType=INTEGER},
+      </if>
+      <if test="record.engineerId != null">
+        engineer_id = #{record.engineerId,jdbcType=BIGINT},
+      </if>
+      <if test="record.enterpriseId != null">
+        enterprise_id = #{record.enterpriseId,jdbcType=BIGINT},
+      </if>
+      <if test="record.enterpriseEmployees != null">
+        enterprise_employees = #{record.enterpriseEmployees,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ifUseParts != null">
+        if_use_parts = #{record.ifUseParts,jdbcType=INTEGER},
+      </if>
+      <if test="record.estimateServiceCost != null">
+        estimate_service_cost = #{record.estimateServiceCost,jdbcType=BIGINT},
+      </if>
+      <if test="record.totalCost != null">
+        total_cost = #{record.totalCost,jdbcType=BIGINT},
+      </if>
+      <if test="record.repairCost != null">
+        repair_cost = #{record.repairCost,jdbcType=BIGINT},
+      </if>
+      <if test="record.partsCost != null">
+        parts_cost = #{record.partsCost,jdbcType=BIGINT},
+      </if>
+      <if test="record.settlementStatus != null">
+        settlement_status = #{record.settlementStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="record.payed != null">
+        payed = #{record.payed,jdbcType=BIGINT},
+      </if>
+      <if test="record.status != null">
+        status = #{record.status,jdbcType=VARCHAR},
+      </if>
+      <if test="record.serviceCycle != null">
+        service_cycle = #{record.serviceCycle,jdbcType=INTEGER},
+      </if>
+      <if test="record.type != null">
+        type = #{record.type,jdbcType=VARCHAR},
+      </if>
+      <if test="record.remark != null">
+        remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateTime != null">
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.instruments != null">
+        instruments = #{record.instruments,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.partsList != null">
+        parts_list = #{record.partsList,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map">
+    update order
+    set id = #{record.id,jdbcType=BIGINT},
+      customer_id = #{record.customerId,jdbcType=BIGINT},
+      server_type = #{record.serverType,jdbcType=VARCHAR},
+      is_relate_assets = #{record.isRelateAssets,jdbcType=INTEGER},
+      engineer_id = #{record.engineerId,jdbcType=BIGINT},
+      enterprise_id = #{record.enterpriseId,jdbcType=BIGINT},
+      enterprise_employees = #{record.enterpriseEmployees,jdbcType=VARCHAR},
+      if_use_parts = #{record.ifUseParts,jdbcType=INTEGER},
+      estimate_service_cost = #{record.estimateServiceCost,jdbcType=BIGINT},
+      total_cost = #{record.totalCost,jdbcType=BIGINT},
+      repair_cost = #{record.repairCost,jdbcType=BIGINT},
+      parts_cost = #{record.partsCost,jdbcType=BIGINT},
+      settlement_status = #{record.settlementStatus,jdbcType=VARCHAR},
+      payed = #{record.payed,jdbcType=BIGINT},
+      status = #{record.status,jdbcType=VARCHAR},
+      service_cycle = #{record.serviceCycle,jdbcType=INTEGER},
+      type = #{record.type,jdbcType=VARCHAR},
+      remark = #{record.remark,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      instruments = #{record.instruments,jdbcType=LONGVARCHAR},
+      parts_list = #{record.partsList,jdbcType=LONGVARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update order
+    set id = #{record.id,jdbcType=BIGINT},
+      customer_id = #{record.customerId,jdbcType=BIGINT},
+      server_type = #{record.serverType,jdbcType=VARCHAR},
+      is_relate_assets = #{record.isRelateAssets,jdbcType=INTEGER},
+      engineer_id = #{record.engineerId,jdbcType=BIGINT},
+      enterprise_id = #{record.enterpriseId,jdbcType=BIGINT},
+      enterprise_employees = #{record.enterpriseEmployees,jdbcType=VARCHAR},
+      if_use_parts = #{record.ifUseParts,jdbcType=INTEGER},
+      estimate_service_cost = #{record.estimateServiceCost,jdbcType=BIGINT},
+      total_cost = #{record.totalCost,jdbcType=BIGINT},
+      repair_cost = #{record.repairCost,jdbcType=BIGINT},
+      parts_cost = #{record.partsCost,jdbcType=BIGINT},
+      settlement_status = #{record.settlementStatus,jdbcType=VARCHAR},
+      payed = #{record.payed,jdbcType=BIGINT},
+      status = #{record.status,jdbcType=VARCHAR},
+      service_cycle = #{record.serviceCycle,jdbcType=INTEGER},
+      type = #{record.type,jdbcType=VARCHAR},
+      remark = #{record.remark,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.kongwu.insweb.entity.OrderWithBLOBs">
+    update order
+    <set>
+      <if test="customerId != null">
+        customer_id = #{customerId,jdbcType=BIGINT},
+      </if>
+      <if test="serverType != null">
+        server_type = #{serverType,jdbcType=VARCHAR},
+      </if>
+      <if test="isRelateAssets != null">
+        is_relate_assets = #{isRelateAssets,jdbcType=INTEGER},
+      </if>
+      <if test="engineerId != null">
+        engineer_id = #{engineerId,jdbcType=BIGINT},
+      </if>
+      <if test="enterpriseId != null">
+        enterprise_id = #{enterpriseId,jdbcType=BIGINT},
+      </if>
+      <if test="enterpriseEmployees != null">
+        enterprise_employees = #{enterpriseEmployees,jdbcType=VARCHAR},
+      </if>
+      <if test="ifUseParts != null">
+        if_use_parts = #{ifUseParts,jdbcType=INTEGER},
+      </if>
+      <if test="estimateServiceCost != null">
+        estimate_service_cost = #{estimateServiceCost,jdbcType=BIGINT},
+      </if>
+      <if test="totalCost != null">
+        total_cost = #{totalCost,jdbcType=BIGINT},
+      </if>
+      <if test="repairCost != null">
+        repair_cost = #{repairCost,jdbcType=BIGINT},
+      </if>
+      <if test="partsCost != null">
+        parts_cost = #{partsCost,jdbcType=BIGINT},
+      </if>
+      <if test="settlementStatus != null">
+        settlement_status = #{settlementStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="payed != null">
+        payed = #{payed,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="serviceCycle != null">
+        service_cycle = #{serviceCycle,jdbcType=INTEGER},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="instruments != null">
+        instruments = #{instruments,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="partsList != null">
+        parts_list = #{partsList,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.kongwu.insweb.entity.OrderWithBLOBs">
+    update order
+    set customer_id = #{customerId,jdbcType=BIGINT},
+      server_type = #{serverType,jdbcType=VARCHAR},
+      is_relate_assets = #{isRelateAssets,jdbcType=INTEGER},
+      engineer_id = #{engineerId,jdbcType=BIGINT},
+      enterprise_id = #{enterpriseId,jdbcType=BIGINT},
+      enterprise_employees = #{enterpriseEmployees,jdbcType=VARCHAR},
+      if_use_parts = #{ifUseParts,jdbcType=INTEGER},
+      estimate_service_cost = #{estimateServiceCost,jdbcType=BIGINT},
+      total_cost = #{totalCost,jdbcType=BIGINT},
+      repair_cost = #{repairCost,jdbcType=BIGINT},
+      parts_cost = #{partsCost,jdbcType=BIGINT},
+      settlement_status = #{settlementStatus,jdbcType=VARCHAR},
+      payed = #{payed,jdbcType=BIGINT},
+      status = #{status,jdbcType=VARCHAR},
+      service_cycle = #{serviceCycle,jdbcType=INTEGER},
+      type = #{type,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      instruments = #{instruments,jdbcType=LONGVARCHAR},
+      parts_list = #{partsList,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.kongwu.insweb.entity.Order">
+    update order
+    set customer_id = #{customerId,jdbcType=BIGINT},
+      server_type = #{serverType,jdbcType=VARCHAR},
+      is_relate_assets = #{isRelateAssets,jdbcType=INTEGER},
+      engineer_id = #{engineerId,jdbcType=BIGINT},
+      enterprise_id = #{enterpriseId,jdbcType=BIGINT},
+      enterprise_employees = #{enterpriseEmployees,jdbcType=VARCHAR},
+      if_use_parts = #{ifUseParts,jdbcType=INTEGER},
+      estimate_service_cost = #{estimateServiceCost,jdbcType=BIGINT},
+      total_cost = #{totalCost,jdbcType=BIGINT},
+      repair_cost = #{repairCost,jdbcType=BIGINT},
+      parts_cost = #{partsCost,jdbcType=BIGINT},
+      settlement_status = #{settlementStatus,jdbcType=VARCHAR},
+      payed = #{payed,jdbcType=BIGINT},
+      status = #{status,jdbcType=VARCHAR},
+      service_cycle = #{serviceCycle,jdbcType=INTEGER},
+      type = #{type,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <resultMap id="BaseResultMap" type="com.kongwu.insweb.entity.Order">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="customer_id" jdbcType="BIGINT" property="customerId" />
+    <result column="server_type" jdbcType="VARCHAR" property="serverType" />
+    <result column="is_relate_assets" jdbcType="INTEGER" property="isRelateAssets" />
+    <result column="engineer_id" jdbcType="BIGINT" property="engineerId" />
+    <result column="enterprise_id" jdbcType="BIGINT" property="enterpriseId" />
+    <result column="enterprise_employees" jdbcType="VARCHAR" property="enterpriseEmployees" />
+    <result column="if_use_parts" jdbcType="INTEGER" property="ifUseParts" />
+    <result column="estimate_service_cost" jdbcType="BIGINT" property="estimateServiceCost" />
+    <result column="total_cost" jdbcType="BIGINT" property="totalCost" />
+    <result column="repair_cost" jdbcType="BIGINT" property="repairCost" />
+    <result column="parts_cost" jdbcType="BIGINT" property="partsCost" />
+    <result column="settlement_status" jdbcType="VARCHAR" property="settlementStatus" />
+    <result column="payed" jdbcType="BIGINT" property="payed" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="service_cycle" jdbcType="INTEGER" property="serviceCycle" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.kongwu.insweb.entity.OrderWithBLOBs">
+    <result column="instruments" jdbcType="LONGVARCHAR" property="instruments" />
+    <result column="parts_list" jdbcType="LONGVARCHAR" property="partsList" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, customer_id, server_type, is_relate_assets, engineer_id, enterprise_id, enterprise_employees, 
+    if_use_parts, estimate_service_cost, total_cost, repair_cost, parts_cost, settlement_status, 
+    payed, status, service_cycle, type, remark, create_time, update_time
+  </sql>
+  <sql id="Blob_Column_List">
+    instruments, parts_list
+  </sql>
+  <select id="selectByExampleWithBLOBs" parameterType="com.kongwu.insweb.entity.OrderExample" resultMap="ResultMapWithBLOBs">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from order
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExample" parameterType="com.kongwu.insweb.entity.OrderExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from order
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from order
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from order
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.kongwu.insweb.entity.OrderExample">
+    delete from order
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.kongwu.insweb.entity.OrderWithBLOBs">
+    insert into order (id, customer_id, server_type, 
+      is_relate_assets, engineer_id, enterprise_id, 
+      enterprise_employees, if_use_parts, estimate_service_cost, 
+      total_cost, repair_cost, parts_cost, 
+      settlement_status, payed, status, 
+      service_cycle, type, remark, 
+      create_time, update_time, instruments, 
+      parts_list)
+    values (#{id,jdbcType=BIGINT}, #{customerId,jdbcType=BIGINT}, #{serverType,jdbcType=VARCHAR}, 
+      #{isRelateAssets,jdbcType=INTEGER}, #{engineerId,jdbcType=BIGINT}, #{enterpriseId,jdbcType=BIGINT}, 
+      #{enterpriseEmployees,jdbcType=VARCHAR}, #{ifUseParts,jdbcType=INTEGER}, #{estimateServiceCost,jdbcType=BIGINT}, 
+      #{totalCost,jdbcType=BIGINT}, #{repairCost,jdbcType=BIGINT}, #{partsCost,jdbcType=BIGINT}, 
+      #{settlementStatus,jdbcType=VARCHAR}, #{payed,jdbcType=BIGINT}, #{status,jdbcType=VARCHAR}, 
+      #{serviceCycle,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{instruments,jdbcType=LONGVARCHAR}, 
+      #{partsList,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.kongwu.insweb.entity.OrderWithBLOBs">
+    insert into order
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="customerId != null">
+        customer_id,
+      </if>
+      <if test="serverType != null">
+        server_type,
+      </if>
+      <if test="isRelateAssets != null">
+        is_relate_assets,
+      </if>
+      <if test="engineerId != null">
+        engineer_id,
+      </if>
+      <if test="enterpriseId != null">
+        enterprise_id,
+      </if>
+      <if test="enterpriseEmployees != null">
+        enterprise_employees,
+      </if>
+      <if test="ifUseParts != null">
+        if_use_parts,
+      </if>
+      <if test="estimateServiceCost != null">
+        estimate_service_cost,
+      </if>
+      <if test="totalCost != null">
+        total_cost,
+      </if>
+      <if test="repairCost != null">
+        repair_cost,
+      </if>
+      <if test="partsCost != null">
+        parts_cost,
+      </if>
+      <if test="settlementStatus != null">
+        settlement_status,
+      </if>
+      <if test="payed != null">
+        payed,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="serviceCycle != null">
+        service_cycle,
+      </if>
+      <if test="type != null">
+        type,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="instruments != null">
+        instruments,
+      </if>
+      <if test="partsList != null">
+        parts_list,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="customerId != null">
+        #{customerId,jdbcType=BIGINT},
+      </if>
+      <if test="serverType != null">
+        #{serverType,jdbcType=VARCHAR},
+      </if>
+      <if test="isRelateAssets != null">
+        #{isRelateAssets,jdbcType=INTEGER},
+      </if>
+      <if test="engineerId != null">
+        #{engineerId,jdbcType=BIGINT},
+      </if>
+      <if test="enterpriseId != null">
+        #{enterpriseId,jdbcType=BIGINT},
+      </if>
+      <if test="enterpriseEmployees != null">
+        #{enterpriseEmployees,jdbcType=VARCHAR},
+      </if>
+      <if test="ifUseParts != null">
+        #{ifUseParts,jdbcType=INTEGER},
+      </if>
+      <if test="estimateServiceCost != null">
+        #{estimateServiceCost,jdbcType=BIGINT},
+      </if>
+      <if test="totalCost != null">
+        #{totalCost,jdbcType=BIGINT},
+      </if>
+      <if test="repairCost != null">
+        #{repairCost,jdbcType=BIGINT},
+      </if>
+      <if test="partsCost != null">
+        #{partsCost,jdbcType=BIGINT},
+      </if>
+      <if test="settlementStatus != null">
+        #{settlementStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="payed != null">
+        #{payed,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="serviceCycle != null">
+        #{serviceCycle,jdbcType=INTEGER},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="instruments != null">
+        #{instruments,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="partsList != null">
+        #{partsList,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.kongwu.insweb.entity.OrderExample" resultType="java.lang.Integer">
+    select count(*) from order
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update order
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.customerId != null">
+        customer_id = #{record.customerId,jdbcType=BIGINT},
+      </if>
+      <if test="record.serverType != null">
+        server_type = #{record.serverType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isRelateAssets != null">
+        is_relate_assets = #{record.isRelateAssets,jdbcType=INTEGER},
+      </if>
+      <if test="record.engineerId != null">
+        engineer_id = #{record.engineerId,jdbcType=BIGINT},
+      </if>
+      <if test="record.enterpriseId != null">
+        enterprise_id = #{record.enterpriseId,jdbcType=BIGINT},
+      </if>
+      <if test="record.enterpriseEmployees != null">
+        enterprise_employees = #{record.enterpriseEmployees,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ifUseParts != null">
+        if_use_parts = #{record.ifUseParts,jdbcType=INTEGER},
+      </if>
+      <if test="record.estimateServiceCost != null">
+        estimate_service_cost = #{record.estimateServiceCost,jdbcType=BIGINT},
+      </if>
+      <if test="record.totalCost != null">
+        total_cost = #{record.totalCost,jdbcType=BIGINT},
+      </if>
+      <if test="record.repairCost != null">
+        repair_cost = #{record.repairCost,jdbcType=BIGINT},
+      </if>
+      <if test="record.partsCost != null">
+        parts_cost = #{record.partsCost,jdbcType=BIGINT},
+      </if>
+      <if test="record.settlementStatus != null">
+        settlement_status = #{record.settlementStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="record.payed != null">
+        payed = #{record.payed,jdbcType=BIGINT},
+      </if>
+      <if test="record.status != null">
+        status = #{record.status,jdbcType=VARCHAR},
+      </if>
+      <if test="record.serviceCycle != null">
+        service_cycle = #{record.serviceCycle,jdbcType=INTEGER},
+      </if>
+      <if test="record.type != null">
+        type = #{record.type,jdbcType=VARCHAR},
+      </if>
+      <if test="record.remark != null">
+        remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateTime != null">
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.instruments != null">
+        instruments = #{record.instruments,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.partsList != null">
+        parts_list = #{record.partsList,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map">
+    update order
+    set id = #{record.id,jdbcType=BIGINT},
+      customer_id = #{record.customerId,jdbcType=BIGINT},
+      server_type = #{record.serverType,jdbcType=VARCHAR},
+      is_relate_assets = #{record.isRelateAssets,jdbcType=INTEGER},
+      engineer_id = #{record.engineerId,jdbcType=BIGINT},
+      enterprise_id = #{record.enterpriseId,jdbcType=BIGINT},
+      enterprise_employees = #{record.enterpriseEmployees,jdbcType=VARCHAR},
+      if_use_parts = #{record.ifUseParts,jdbcType=INTEGER},
+      estimate_service_cost = #{record.estimateServiceCost,jdbcType=BIGINT},
+      total_cost = #{record.totalCost,jdbcType=BIGINT},
+      repair_cost = #{record.repairCost,jdbcType=BIGINT},
+      parts_cost = #{record.partsCost,jdbcType=BIGINT},
+      settlement_status = #{record.settlementStatus,jdbcType=VARCHAR},
+      payed = #{record.payed,jdbcType=BIGINT},
+      status = #{record.status,jdbcType=VARCHAR},
+      service_cycle = #{record.serviceCycle,jdbcType=INTEGER},
+      type = #{record.type,jdbcType=VARCHAR},
+      remark = #{record.remark,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      instruments = #{record.instruments,jdbcType=LONGVARCHAR},
+      parts_list = #{record.partsList,jdbcType=LONGVARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update order
+    set id = #{record.id,jdbcType=BIGINT},
+      customer_id = #{record.customerId,jdbcType=BIGINT},
+      server_type = #{record.serverType,jdbcType=VARCHAR},
+      is_relate_assets = #{record.isRelateAssets,jdbcType=INTEGER},
+      engineer_id = #{record.engineerId,jdbcType=BIGINT},
+      enterprise_id = #{record.enterpriseId,jdbcType=BIGINT},
+      enterprise_employees = #{record.enterpriseEmployees,jdbcType=VARCHAR},
+      if_use_parts = #{record.ifUseParts,jdbcType=INTEGER},
+      estimate_service_cost = #{record.estimateServiceCost,jdbcType=BIGINT},
+      total_cost = #{record.totalCost,jdbcType=BIGINT},
+      repair_cost = #{record.repairCost,jdbcType=BIGINT},
+      parts_cost = #{record.partsCost,jdbcType=BIGINT},
+      settlement_status = #{record.settlementStatus,jdbcType=VARCHAR},
+      payed = #{record.payed,jdbcType=BIGINT},
+      status = #{record.status,jdbcType=VARCHAR},
+      service_cycle = #{record.serviceCycle,jdbcType=INTEGER},
+      type = #{record.type,jdbcType=VARCHAR},
+      remark = #{record.remark,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.kongwu.insweb.entity.OrderWithBLOBs">
+    update order
+    <set>
+      <if test="customerId != null">
+        customer_id = #{customerId,jdbcType=BIGINT},
+      </if>
+      <if test="serverType != null">
+        server_type = #{serverType,jdbcType=VARCHAR},
+      </if>
+      <if test="isRelateAssets != null">
+        is_relate_assets = #{isRelateAssets,jdbcType=INTEGER},
+      </if>
+      <if test="engineerId != null">
+        engineer_id = #{engineerId,jdbcType=BIGINT},
+      </if>
+      <if test="enterpriseId != null">
+        enterprise_id = #{enterpriseId,jdbcType=BIGINT},
+      </if>
+      <if test="enterpriseEmployees != null">
+        enterprise_employees = #{enterpriseEmployees,jdbcType=VARCHAR},
+      </if>
+      <if test="ifUseParts != null">
+        if_use_parts = #{ifUseParts,jdbcType=INTEGER},
+      </if>
+      <if test="estimateServiceCost != null">
+        estimate_service_cost = #{estimateServiceCost,jdbcType=BIGINT},
+      </if>
+      <if test="totalCost != null">
+        total_cost = #{totalCost,jdbcType=BIGINT},
+      </if>
+      <if test="repairCost != null">
+        repair_cost = #{repairCost,jdbcType=BIGINT},
+      </if>
+      <if test="partsCost != null">
+        parts_cost = #{partsCost,jdbcType=BIGINT},
+      </if>
+      <if test="settlementStatus != null">
+        settlement_status = #{settlementStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="payed != null">
+        payed = #{payed,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="serviceCycle != null">
+        service_cycle = #{serviceCycle,jdbcType=INTEGER},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="instruments != null">
+        instruments = #{instruments,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="partsList != null">
+        parts_list = #{partsList,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.kongwu.insweb.entity.OrderWithBLOBs">
+    update order
+    set customer_id = #{customerId,jdbcType=BIGINT},
+      server_type = #{serverType,jdbcType=VARCHAR},
+      is_relate_assets = #{isRelateAssets,jdbcType=INTEGER},
+      engineer_id = #{engineerId,jdbcType=BIGINT},
+      enterprise_id = #{enterpriseId,jdbcType=BIGINT},
+      enterprise_employees = #{enterpriseEmployees,jdbcType=VARCHAR},
+      if_use_parts = #{ifUseParts,jdbcType=INTEGER},
+      estimate_service_cost = #{estimateServiceCost,jdbcType=BIGINT},
+      total_cost = #{totalCost,jdbcType=BIGINT},
+      repair_cost = #{repairCost,jdbcType=BIGINT},
+      parts_cost = #{partsCost,jdbcType=BIGINT},
+      settlement_status = #{settlementStatus,jdbcType=VARCHAR},
+      payed = #{payed,jdbcType=BIGINT},
+      status = #{status,jdbcType=VARCHAR},
+      service_cycle = #{serviceCycle,jdbcType=INTEGER},
+      type = #{type,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      instruments = #{instruments,jdbcType=LONGVARCHAR},
+      parts_list = #{partsList,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.kongwu.insweb.entity.Order">
+    update order
+    set customer_id = #{customerId,jdbcType=BIGINT},
+      server_type = #{serverType,jdbcType=VARCHAR},
+      is_relate_assets = #{isRelateAssets,jdbcType=INTEGER},
+      engineer_id = #{engineerId,jdbcType=BIGINT},
+      enterprise_id = #{enterpriseId,jdbcType=BIGINT},
+      enterprise_employees = #{enterpriseEmployees,jdbcType=VARCHAR},
+      if_use_parts = #{ifUseParts,jdbcType=INTEGER},
+      estimate_service_cost = #{estimateServiceCost,jdbcType=BIGINT},
+      total_cost = #{totalCost,jdbcType=BIGINT},
+      repair_cost = #{repairCost,jdbcType=BIGINT},
+      parts_cost = #{partsCost,jdbcType=BIGINT},
+      settlement_status = #{settlementStatus,jdbcType=VARCHAR},
+      payed = #{payed,jdbcType=BIGINT},
+      status = #{status,jdbcType=VARCHAR},
+      service_cycle = #{serviceCycle,jdbcType=INTEGER},
+      type = #{type,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <resultMap id="BaseResultMap" type="com.kongwu.insweb.entity.Order">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="customer_id" jdbcType="BIGINT" property="customerId" />
+    <result column="server_type" jdbcType="VARCHAR" property="serverType" />
+    <result column="is_relate_assets" jdbcType="INTEGER" property="isRelateAssets" />
+    <result column="engineer_id" jdbcType="BIGINT" property="engineerId" />
+    <result column="enterprise_id" jdbcType="BIGINT" property="enterpriseId" />
+    <result column="enterprise_employees" jdbcType="VARCHAR" property="enterpriseEmployees" />
+    <result column="if_use_parts" jdbcType="INTEGER" property="ifUseParts" />
+    <result column="estimate_service_cost" jdbcType="BIGINT" property="estimateServiceCost" />
+    <result column="total_cost" jdbcType="BIGINT" property="totalCost" />
+    <result column="repair_cost" jdbcType="BIGINT" property="repairCost" />
+    <result column="parts_cost" jdbcType="BIGINT" property="partsCost" />
+    <result column="settlement_status" jdbcType="VARCHAR" property="settlementStatus" />
+    <result column="payed" jdbcType="BIGINT" property="payed" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="service_cycle" jdbcType="INTEGER" property="serviceCycle" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.kongwu.insweb.entity.OrderWithBLOBs">
+    <result column="instruments" jdbcType="LONGVARCHAR" property="instruments" />
+    <result column="parts_list" jdbcType="LONGVARCHAR" property="partsList" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, customer_id, server_type, is_relate_assets, engineer_id, enterprise_id, enterprise_employees, 
+    if_use_parts, estimate_service_cost, total_cost, repair_cost, parts_cost, settlement_status, 
+    payed, status, service_cycle, type, remark, create_time, update_time
+  </sql>
+  <sql id="Blob_Column_List">
+    instruments, parts_list
+  </sql>
+  <select id="selectByExampleWithBLOBs" parameterType="com.kongwu.insweb.entity.OrderExample" resultMap="ResultMapWithBLOBs">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from order
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExample" parameterType="com.kongwu.insweb.entity.OrderExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from order
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from order
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from order
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.kongwu.insweb.entity.OrderExample">
+    delete from order
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.kongwu.insweb.entity.OrderWithBLOBs">
+    insert into order (id, customer_id, server_type, 
+      is_relate_assets, engineer_id, enterprise_id, 
+      enterprise_employees, if_use_parts, estimate_service_cost, 
+      total_cost, repair_cost, parts_cost, 
+      settlement_status, payed, status, 
+      service_cycle, type, remark, 
+      create_time, update_time, instruments, 
+      parts_list)
+    values (#{id,jdbcType=BIGINT}, #{customerId,jdbcType=BIGINT}, #{serverType,jdbcType=VARCHAR}, 
+      #{isRelateAssets,jdbcType=INTEGER}, #{engineerId,jdbcType=BIGINT}, #{enterpriseId,jdbcType=BIGINT}, 
+      #{enterpriseEmployees,jdbcType=VARCHAR}, #{ifUseParts,jdbcType=INTEGER}, #{estimateServiceCost,jdbcType=BIGINT}, 
+      #{totalCost,jdbcType=BIGINT}, #{repairCost,jdbcType=BIGINT}, #{partsCost,jdbcType=BIGINT}, 
+      #{settlementStatus,jdbcType=VARCHAR}, #{payed,jdbcType=BIGINT}, #{status,jdbcType=VARCHAR}, 
+      #{serviceCycle,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{instruments,jdbcType=LONGVARCHAR}, 
+      #{partsList,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.kongwu.insweb.entity.OrderWithBLOBs">
+    insert into order
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="customerId != null">
+        customer_id,
+      </if>
+      <if test="serverType != null">
+        server_type,
+      </if>
+      <if test="isRelateAssets != null">
+        is_relate_assets,
+      </if>
+      <if test="engineerId != null">
+        engineer_id,
+      </if>
+      <if test="enterpriseId != null">
+        enterprise_id,
+      </if>
+      <if test="enterpriseEmployees != null">
+        enterprise_employees,
+      </if>
+      <if test="ifUseParts != null">
+        if_use_parts,
+      </if>
+      <if test="estimateServiceCost != null">
+        estimate_service_cost,
+      </if>
+      <if test="totalCost != null">
+        total_cost,
+      </if>
+      <if test="repairCost != null">
+        repair_cost,
+      </if>
+      <if test="partsCost != null">
+        parts_cost,
+      </if>
+      <if test="settlementStatus != null">
+        settlement_status,
+      </if>
+      <if test="payed != null">
+        payed,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="serviceCycle != null">
+        service_cycle,
+      </if>
+      <if test="type != null">
+        type,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="instruments != null">
+        instruments,
+      </if>
+      <if test="partsList != null">
+        parts_list,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="customerId != null">
+        #{customerId,jdbcType=BIGINT},
+      </if>
+      <if test="serverType != null">
+        #{serverType,jdbcType=VARCHAR},
+      </if>
+      <if test="isRelateAssets != null">
+        #{isRelateAssets,jdbcType=INTEGER},
+      </if>
+      <if test="engineerId != null">
+        #{engineerId,jdbcType=BIGINT},
+      </if>
+      <if test="enterpriseId != null">
+        #{enterpriseId,jdbcType=BIGINT},
+      </if>
+      <if test="enterpriseEmployees != null">
+        #{enterpriseEmployees,jdbcType=VARCHAR},
+      </if>
+      <if test="ifUseParts != null">
+        #{ifUseParts,jdbcType=INTEGER},
+      </if>
+      <if test="estimateServiceCost != null">
+        #{estimateServiceCost,jdbcType=BIGINT},
+      </if>
+      <if test="totalCost != null">
+        #{totalCost,jdbcType=BIGINT},
+      </if>
+      <if test="repairCost != null">
+        #{repairCost,jdbcType=BIGINT},
+      </if>
+      <if test="partsCost != null">
+        #{partsCost,jdbcType=BIGINT},
+      </if>
+      <if test="settlementStatus != null">
+        #{settlementStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="payed != null">
+        #{payed,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="serviceCycle != null">
+        #{serviceCycle,jdbcType=INTEGER},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="instruments != null">
+        #{instruments,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="partsList != null">
+        #{partsList,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.kongwu.insweb.entity.OrderExample" resultType="java.lang.Integer">
+    select count(*) from order
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update order
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.customerId != null">
+        customer_id = #{record.customerId,jdbcType=BIGINT},
+      </if>
+      <if test="record.serverType != null">
+        server_type = #{record.serverType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isRelateAssets != null">
+        is_relate_assets = #{record.isRelateAssets,jdbcType=INTEGER},
+      </if>
+      <if test="record.engineerId != null">
+        engineer_id = #{record.engineerId,jdbcType=BIGINT},
+      </if>
+      <if test="record.enterpriseId != null">
+        enterprise_id = #{record.enterpriseId,jdbcType=BIGINT},
+      </if>
+      <if test="record.enterpriseEmployees != null">
+        enterprise_employees = #{record.enterpriseEmployees,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ifUseParts != null">
+        if_use_parts = #{record.ifUseParts,jdbcType=INTEGER},
+      </if>
+      <if test="record.estimateServiceCost != null">
+        estimate_service_cost = #{record.estimateServiceCost,jdbcType=BIGINT},
+      </if>
+      <if test="record.totalCost != null">
+        total_cost = #{record.totalCost,jdbcType=BIGINT},
+      </if>
+      <if test="record.repairCost != null">
+        repair_cost = #{record.repairCost,jdbcType=BIGINT},
+      </if>
+      <if test="record.partsCost != null">
+        parts_cost = #{record.partsCost,jdbcType=BIGINT},
+      </if>
+      <if test="record.settlementStatus != null">
+        settlement_status = #{record.settlementStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="record.payed != null">
+        payed = #{record.payed,jdbcType=BIGINT},
+      </if>
+      <if test="record.status != null">
+        status = #{record.status,jdbcType=VARCHAR},
+      </if>
+      <if test="record.serviceCycle != null">
+        service_cycle = #{record.serviceCycle,jdbcType=INTEGER},
+      </if>
+      <if test="record.type != null">
+        type = #{record.type,jdbcType=VARCHAR},
+      </if>
+      <if test="record.remark != null">
+        remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateTime != null">
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.instruments != null">
+        instruments = #{record.instruments,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.partsList != null">
+        parts_list = #{record.partsList,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map">
+    update order
+    set id = #{record.id,jdbcType=BIGINT},
+      customer_id = #{record.customerId,jdbcType=BIGINT},
+      server_type = #{record.serverType,jdbcType=VARCHAR},
+      is_relate_assets = #{record.isRelateAssets,jdbcType=INTEGER},
+      engineer_id = #{record.engineerId,jdbcType=BIGINT},
+      enterprise_id = #{record.enterpriseId,jdbcType=BIGINT},
+      enterprise_employees = #{record.enterpriseEmployees,jdbcType=VARCHAR},
+      if_use_parts = #{record.ifUseParts,jdbcType=INTEGER},
+      estimate_service_cost = #{record.estimateServiceCost,jdbcType=BIGINT},
+      total_cost = #{record.totalCost,jdbcType=BIGINT},
+      repair_cost = #{record.repairCost,jdbcType=BIGINT},
+      parts_cost = #{record.partsCost,jdbcType=BIGINT},
+      settlement_status = #{record.settlementStatus,jdbcType=VARCHAR},
+      payed = #{record.payed,jdbcType=BIGINT},
+      status = #{record.status,jdbcType=VARCHAR},
+      service_cycle = #{record.serviceCycle,jdbcType=INTEGER},
+      type = #{record.type,jdbcType=VARCHAR},
+      remark = #{record.remark,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      instruments = #{record.instruments,jdbcType=LONGVARCHAR},
+      parts_list = #{record.partsList,jdbcType=LONGVARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update order
+    set id = #{record.id,jdbcType=BIGINT},
+      customer_id = #{record.customerId,jdbcType=BIGINT},
+      server_type = #{record.serverType,jdbcType=VARCHAR},
+      is_relate_assets = #{record.isRelateAssets,jdbcType=INTEGER},
+      engineer_id = #{record.engineerId,jdbcType=BIGINT},
+      enterprise_id = #{record.enterpriseId,jdbcType=BIGINT},
+      enterprise_employees = #{record.enterpriseEmployees,jdbcType=VARCHAR},
+      if_use_parts = #{record.ifUseParts,jdbcType=INTEGER},
+      estimate_service_cost = #{record.estimateServiceCost,jdbcType=BIGINT},
+      total_cost = #{record.totalCost,jdbcType=BIGINT},
+      repair_cost = #{record.repairCost,jdbcType=BIGINT},
+      parts_cost = #{record.partsCost,jdbcType=BIGINT},
+      settlement_status = #{record.settlementStatus,jdbcType=VARCHAR},
+      payed = #{record.payed,jdbcType=BIGINT},
+      status = #{record.status,jdbcType=VARCHAR},
+      service_cycle = #{record.serviceCycle,jdbcType=INTEGER},
+      type = #{record.type,jdbcType=VARCHAR},
+      remark = #{record.remark,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.kongwu.insweb.entity.OrderWithBLOBs">
+    update order
+    <set>
+      <if test="customerId != null">
+        customer_id = #{customerId,jdbcType=BIGINT},
+      </if>
+      <if test="serverType != null">
+        server_type = #{serverType,jdbcType=VARCHAR},
+      </if>
+      <if test="isRelateAssets != null">
+        is_relate_assets = #{isRelateAssets,jdbcType=INTEGER},
+      </if>
+      <if test="engineerId != null">
+        engineer_id = #{engineerId,jdbcType=BIGINT},
+      </if>
+      <if test="enterpriseId != null">
+        enterprise_id = #{enterpriseId,jdbcType=BIGINT},
+      </if>
+      <if test="enterpriseEmployees != null">
+        enterprise_employees = #{enterpriseEmployees,jdbcType=VARCHAR},
+      </if>
+      <if test="ifUseParts != null">
+        if_use_parts = #{ifUseParts,jdbcType=INTEGER},
+      </if>
+      <if test="estimateServiceCost != null">
+        estimate_service_cost = #{estimateServiceCost,jdbcType=BIGINT},
+      </if>
+      <if test="totalCost != null">
+        total_cost = #{totalCost,jdbcType=BIGINT},
+      </if>
+      <if test="repairCost != null">
+        repair_cost = #{repairCost,jdbcType=BIGINT},
+      </if>
+      <if test="partsCost != null">
+        parts_cost = #{partsCost,jdbcType=BIGINT},
+      </if>
+      <if test="settlementStatus != null">
+        settlement_status = #{settlementStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="payed != null">
+        payed = #{payed,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="serviceCycle != null">
+        service_cycle = #{serviceCycle,jdbcType=INTEGER},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="instruments != null">
+        instruments = #{instruments,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="partsList != null">
+        parts_list = #{partsList,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.kongwu.insweb.entity.OrderWithBLOBs">
+    update order
+    set customer_id = #{customerId,jdbcType=BIGINT},
+      server_type = #{serverType,jdbcType=VARCHAR},
+      is_relate_assets = #{isRelateAssets,jdbcType=INTEGER},
+      engineer_id = #{engineerId,jdbcType=BIGINT},
+      enterprise_id = #{enterpriseId,jdbcType=BIGINT},
+      enterprise_employees = #{enterpriseEmployees,jdbcType=VARCHAR},
+      if_use_parts = #{ifUseParts,jdbcType=INTEGER},
+      estimate_service_cost = #{estimateServiceCost,jdbcType=BIGINT},
+      total_cost = #{totalCost,jdbcType=BIGINT},
+      repair_cost = #{repairCost,jdbcType=BIGINT},
+      parts_cost = #{partsCost,jdbcType=BIGINT},
+      settlement_status = #{settlementStatus,jdbcType=VARCHAR},
+      payed = #{payed,jdbcType=BIGINT},
+      status = #{status,jdbcType=VARCHAR},
+      service_cycle = #{serviceCycle,jdbcType=INTEGER},
+      type = #{type,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      instruments = #{instruments,jdbcType=LONGVARCHAR},
+      parts_list = #{partsList,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.kongwu.insweb.entity.Order">
+    update order
+    set customer_id = #{customerId,jdbcType=BIGINT},
+      server_type = #{serverType,jdbcType=VARCHAR},
+      is_relate_assets = #{isRelateAssets,jdbcType=INTEGER},
+      engineer_id = #{engineerId,jdbcType=BIGINT},
+      enterprise_id = #{enterpriseId,jdbcType=BIGINT},
+      enterprise_employees = #{enterpriseEmployees,jdbcType=VARCHAR},
+      if_use_parts = #{ifUseParts,jdbcType=INTEGER},
+      estimate_service_cost = #{estimateServiceCost,jdbcType=BIGINT},
+      total_cost = #{totalCost,jdbcType=BIGINT},
+      repair_cost = #{repairCost,jdbcType=BIGINT},
+      parts_cost = #{partsCost,jdbcType=BIGINT},
+      settlement_status = #{settlementStatus,jdbcType=VARCHAR},
+      payed = #{payed,jdbcType=BIGINT},
+      status = #{status,jdbcType=VARCHAR},
+      service_cycle = #{serviceCycle,jdbcType=INTEGER},
+      type = #{type,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <resultMap id="BaseResultMap" type="com.kongwu.insweb.entity.Order">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="customer_id" jdbcType="BIGINT" property="customerId" />
+    <result column="server_type" jdbcType="VARCHAR" property="serverType" />
+    <result column="is_relate_assets" jdbcType="INTEGER" property="isRelateAssets" />
+    <result column="engineer_id" jdbcType="BIGINT" property="engineerId" />
+    <result column="enterprise_id" jdbcType="BIGINT" property="enterpriseId" />
+    <result column="enterprise_employees" jdbcType="VARCHAR" property="enterpriseEmployees" />
+    <result column="if_use_parts" jdbcType="INTEGER" property="ifUseParts" />
+    <result column="estimate_service_cost" jdbcType="BIGINT" property="estimateServiceCost" />
+    <result column="total_cost" jdbcType="BIGINT" property="totalCost" />
+    <result column="repair_cost" jdbcType="BIGINT" property="repairCost" />
+    <result column="parts_cost" jdbcType="BIGINT" property="partsCost" />
+    <result column="settlement_status" jdbcType="VARCHAR" property="settlementStatus" />
+    <result column="payed" jdbcType="BIGINT" property="payed" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="service_cycle" jdbcType="INTEGER" property="serviceCycle" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.kongwu.insweb.entity.OrderWithBLOBs">
+    <result column="instruments" jdbcType="LONGVARCHAR" property="instruments" />
+    <result column="parts_list" jdbcType="LONGVARCHAR" property="partsList" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, customer_id, server_type, is_relate_assets, engineer_id, enterprise_id, enterprise_employees, 
+    if_use_parts, estimate_service_cost, total_cost, repair_cost, parts_cost, settlement_status, 
+    payed, status, service_cycle, type, remark, create_time, update_time
+  </sql>
+  <sql id="Blob_Column_List">
+    instruments, parts_list
+  </sql>
+  <select id="selectByExampleWithBLOBs" parameterType="com.kongwu.insweb.entity.OrderExample" resultMap="ResultMapWithBLOBs">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from order
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExample" parameterType="com.kongwu.insweb.entity.OrderExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from order
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from order
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from order
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.kongwu.insweb.entity.OrderExample">
+    delete from order
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.kongwu.insweb.entity.OrderWithBLOBs">
+    insert into order (id, customer_id, server_type, 
+      is_relate_assets, engineer_id, enterprise_id, 
+      enterprise_employees, if_use_parts, estimate_service_cost, 
+      total_cost, repair_cost, parts_cost, 
+      settlement_status, payed, status, 
+      service_cycle, type, remark, 
+      create_time, update_time, instruments, 
+      parts_list)
+    values (#{id,jdbcType=BIGINT}, #{customerId,jdbcType=BIGINT}, #{serverType,jdbcType=VARCHAR}, 
+      #{isRelateAssets,jdbcType=INTEGER}, #{engineerId,jdbcType=BIGINT}, #{enterpriseId,jdbcType=BIGINT}, 
+      #{enterpriseEmployees,jdbcType=VARCHAR}, #{ifUseParts,jdbcType=INTEGER}, #{estimateServiceCost,jdbcType=BIGINT}, 
+      #{totalCost,jdbcType=BIGINT}, #{repairCost,jdbcType=BIGINT}, #{partsCost,jdbcType=BIGINT}, 
+      #{settlementStatus,jdbcType=VARCHAR}, #{payed,jdbcType=BIGINT}, #{status,jdbcType=VARCHAR}, 
+      #{serviceCycle,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{instruments,jdbcType=LONGVARCHAR}, 
+      #{partsList,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.kongwu.insweb.entity.OrderWithBLOBs">
+    insert into order
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="customerId != null">
+        customer_id,
+      </if>
+      <if test="serverType != null">
+        server_type,
+      </if>
+      <if test="isRelateAssets != null">
+        is_relate_assets,
+      </if>
+      <if test="engineerId != null">
+        engineer_id,
+      </if>
+      <if test="enterpriseId != null">
+        enterprise_id,
+      </if>
+      <if test="enterpriseEmployees != null">
+        enterprise_employees,
+      </if>
+      <if test="ifUseParts != null">
+        if_use_parts,
+      </if>
+      <if test="estimateServiceCost != null">
+        estimate_service_cost,
+      </if>
+      <if test="totalCost != null">
+        total_cost,
+      </if>
+      <if test="repairCost != null">
+        repair_cost,
+      </if>
+      <if test="partsCost != null">
+        parts_cost,
+      </if>
+      <if test="settlementStatus != null">
+        settlement_status,
+      </if>
+      <if test="payed != null">
+        payed,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="serviceCycle != null">
+        service_cycle,
+      </if>
+      <if test="type != null">
+        type,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="instruments != null">
+        instruments,
+      </if>
+      <if test="partsList != null">
+        parts_list,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="customerId != null">
+        #{customerId,jdbcType=BIGINT},
+      </if>
+      <if test="serverType != null">
+        #{serverType,jdbcType=VARCHAR},
+      </if>
+      <if test="isRelateAssets != null">
+        #{isRelateAssets,jdbcType=INTEGER},
+      </if>
+      <if test="engineerId != null">
+        #{engineerId,jdbcType=BIGINT},
+      </if>
+      <if test="enterpriseId != null">
+        #{enterpriseId,jdbcType=BIGINT},
+      </if>
+      <if test="enterpriseEmployees != null">
+        #{enterpriseEmployees,jdbcType=VARCHAR},
+      </if>
+      <if test="ifUseParts != null">
+        #{ifUseParts,jdbcType=INTEGER},
+      </if>
+      <if test="estimateServiceCost != null">
+        #{estimateServiceCost,jdbcType=BIGINT},
+      </if>
+      <if test="totalCost != null">
+        #{totalCost,jdbcType=BIGINT},
+      </if>
+      <if test="repairCost != null">
+        #{repairCost,jdbcType=BIGINT},
+      </if>
+      <if test="partsCost != null">
+        #{partsCost,jdbcType=BIGINT},
+      </if>
+      <if test="settlementStatus != null">
+        #{settlementStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="payed != null">
+        #{payed,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="serviceCycle != null">
+        #{serviceCycle,jdbcType=INTEGER},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="instruments != null">
+        #{instruments,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="partsList != null">
+        #{partsList,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.kongwu.insweb.entity.OrderExample" resultType="java.lang.Integer">
+    select count(*) from order
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update order
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.customerId != null">
+        customer_id = #{record.customerId,jdbcType=BIGINT},
+      </if>
+      <if test="record.serverType != null">
+        server_type = #{record.serverType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isRelateAssets != null">
+        is_relate_assets = #{record.isRelateAssets,jdbcType=INTEGER},
+      </if>
+      <if test="record.engineerId != null">
+        engineer_id = #{record.engineerId,jdbcType=BIGINT},
+      </if>
+      <if test="record.enterpriseId != null">
+        enterprise_id = #{record.enterpriseId,jdbcType=BIGINT},
+      </if>
+      <if test="record.enterpriseEmployees != null">
+        enterprise_employees = #{record.enterpriseEmployees,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ifUseParts != null">
+        if_use_parts = #{record.ifUseParts,jdbcType=INTEGER},
+      </if>
+      <if test="record.estimateServiceCost != null">
+        estimate_service_cost = #{record.estimateServiceCost,jdbcType=BIGINT},
+      </if>
+      <if test="record.totalCost != null">
+        total_cost = #{record.totalCost,jdbcType=BIGINT},
+      </if>
+      <if test="record.repairCost != null">
+        repair_cost = #{record.repairCost,jdbcType=BIGINT},
+      </if>
+      <if test="record.partsCost != null">
+        parts_cost = #{record.partsCost,jdbcType=BIGINT},
+      </if>
+      <if test="record.settlementStatus != null">
+        settlement_status = #{record.settlementStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="record.payed != null">
+        payed = #{record.payed,jdbcType=BIGINT},
+      </if>
+      <if test="record.status != null">
+        status = #{record.status,jdbcType=VARCHAR},
+      </if>
+      <if test="record.serviceCycle != null">
+        service_cycle = #{record.serviceCycle,jdbcType=INTEGER},
+      </if>
+      <if test="record.type != null">
+        type = #{record.type,jdbcType=VARCHAR},
+      </if>
+      <if test="record.remark != null">
+        remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateTime != null">
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.instruments != null">
+        instruments = #{record.instruments,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.partsList != null">
+        parts_list = #{record.partsList,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map">
+    update order
+    set id = #{record.id,jdbcType=BIGINT},
+      customer_id = #{record.customerId,jdbcType=BIGINT},
+      server_type = #{record.serverType,jdbcType=VARCHAR},
+      is_relate_assets = #{record.isRelateAssets,jdbcType=INTEGER},
+      engineer_id = #{record.engineerId,jdbcType=BIGINT},
+      enterprise_id = #{record.enterpriseId,jdbcType=BIGINT},
+      enterprise_employees = #{record.enterpriseEmployees,jdbcType=VARCHAR},
+      if_use_parts = #{record.ifUseParts,jdbcType=INTEGER},
+      estimate_service_cost = #{record.estimateServiceCost,jdbcType=BIGINT},
+      total_cost = #{record.totalCost,jdbcType=BIGINT},
+      repair_cost = #{record.repairCost,jdbcType=BIGINT},
+      parts_cost = #{record.partsCost,jdbcType=BIGINT},
+      settlement_status = #{record.settlementStatus,jdbcType=VARCHAR},
+      payed = #{record.payed,jdbcType=BIGINT},
+      status = #{record.status,jdbcType=VARCHAR},
+      service_cycle = #{record.serviceCycle,jdbcType=INTEGER},
+      type = #{record.type,jdbcType=VARCHAR},
+      remark = #{record.remark,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      instruments = #{record.instruments,jdbcType=LONGVARCHAR},
+      parts_list = #{record.partsList,jdbcType=LONGVARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update order
+    set id = #{record.id,jdbcType=BIGINT},
+      customer_id = #{record.customerId,jdbcType=BIGINT},
+      server_type = #{record.serverType,jdbcType=VARCHAR},
+      is_relate_assets = #{record.isRelateAssets,jdbcType=INTEGER},
+      engineer_id = #{record.engineerId,jdbcType=BIGINT},
+      enterprise_id = #{record.enterpriseId,jdbcType=BIGINT},
+      enterprise_employees = #{record.enterpriseEmployees,jdbcType=VARCHAR},
+      if_use_parts = #{record.ifUseParts,jdbcType=INTEGER},
+      estimate_service_cost = #{record.estimateServiceCost,jdbcType=BIGINT},
+      total_cost = #{record.totalCost,jdbcType=BIGINT},
+      repair_cost = #{record.repairCost,jdbcType=BIGINT},
+      parts_cost = #{record.partsCost,jdbcType=BIGINT},
+      settlement_status = #{record.settlementStatus,jdbcType=VARCHAR},
+      payed = #{record.payed,jdbcType=BIGINT},
+      status = #{record.status,jdbcType=VARCHAR},
+      service_cycle = #{record.serviceCycle,jdbcType=INTEGER},
+      type = #{record.type,jdbcType=VARCHAR},
+      remark = #{record.remark,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.kongwu.insweb.entity.OrderWithBLOBs">
+    update order
+    <set>
+      <if test="customerId != null">
+        customer_id = #{customerId,jdbcType=BIGINT},
+      </if>
+      <if test="serverType != null">
+        server_type = #{serverType,jdbcType=VARCHAR},
+      </if>
+      <if test="isRelateAssets != null">
+        is_relate_assets = #{isRelateAssets,jdbcType=INTEGER},
+      </if>
+      <if test="engineerId != null">
+        engineer_id = #{engineerId,jdbcType=BIGINT},
+      </if>
+      <if test="enterpriseId != null">
+        enterprise_id = #{enterpriseId,jdbcType=BIGINT},
+      </if>
+      <if test="enterpriseEmployees != null">
+        enterprise_employees = #{enterpriseEmployees,jdbcType=VARCHAR},
+      </if>
+      <if test="ifUseParts != null">
+        if_use_parts = #{ifUseParts,jdbcType=INTEGER},
+      </if>
+      <if test="estimateServiceCost != null">
+        estimate_service_cost = #{estimateServiceCost,jdbcType=BIGINT},
+      </if>
+      <if test="totalCost != null">
+        total_cost = #{totalCost,jdbcType=BIGINT},
+      </if>
+      <if test="repairCost != null">
+        repair_cost = #{repairCost,jdbcType=BIGINT},
+      </if>
+      <if test="partsCost != null">
+        parts_cost = #{partsCost,jdbcType=BIGINT},
+      </if>
+      <if test="settlementStatus != null">
+        settlement_status = #{settlementStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="payed != null">
+        payed = #{payed,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="serviceCycle != null">
+        service_cycle = #{serviceCycle,jdbcType=INTEGER},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="instruments != null">
+        instruments = #{instruments,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="partsList != null">
+        parts_list = #{partsList,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.kongwu.insweb.entity.OrderWithBLOBs">
+    update order
+    set customer_id = #{customerId,jdbcType=BIGINT},
+      server_type = #{serverType,jdbcType=VARCHAR},
+      is_relate_assets = #{isRelateAssets,jdbcType=INTEGER},
+      engineer_id = #{engineerId,jdbcType=BIGINT},
+      enterprise_id = #{enterpriseId,jdbcType=BIGINT},
+      enterprise_employees = #{enterpriseEmployees,jdbcType=VARCHAR},
+      if_use_parts = #{ifUseParts,jdbcType=INTEGER},
+      estimate_service_cost = #{estimateServiceCost,jdbcType=BIGINT},
+      total_cost = #{totalCost,jdbcType=BIGINT},
+      repair_cost = #{repairCost,jdbcType=BIGINT},
+      parts_cost = #{partsCost,jdbcType=BIGINT},
+      settlement_status = #{settlementStatus,jdbcType=VARCHAR},
+      payed = #{payed,jdbcType=BIGINT},
+      status = #{status,jdbcType=VARCHAR},
+      service_cycle = #{serviceCycle,jdbcType=INTEGER},
+      type = #{type,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      instruments = #{instruments,jdbcType=LONGVARCHAR},
+      parts_list = #{partsList,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.kongwu.insweb.entity.Order">
+    update order
+    set customer_id = #{customerId,jdbcType=BIGINT},
+      server_type = #{serverType,jdbcType=VARCHAR},
+      is_relate_assets = #{isRelateAssets,jdbcType=INTEGER},
+      engineer_id = #{engineerId,jdbcType=BIGINT},
+      enterprise_id = #{enterpriseId,jdbcType=BIGINT},
+      enterprise_employees = #{enterpriseEmployees,jdbcType=VARCHAR},
+      if_use_parts = #{ifUseParts,jdbcType=INTEGER},
+      estimate_service_cost = #{estimateServiceCost,jdbcType=BIGINT},
+      total_cost = #{totalCost,jdbcType=BIGINT},
+      repair_cost = #{repairCost,jdbcType=BIGINT},
+      parts_cost = #{partsCost,jdbcType=BIGINT},
+      settlement_status = #{settlementStatus,jdbcType=VARCHAR},
+      payed = #{payed,jdbcType=BIGINT},
+      status = #{status,jdbcType=VARCHAR},
+      service_cycle = #{serviceCycle,jdbcType=INTEGER},
+      type = #{type,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <resultMap id="BaseResultMap" type="com.kongwu.insweb.entity.Order">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="customer_id" jdbcType="BIGINT" property="customerId" />
+    <result column="server_type" jdbcType="VARCHAR" property="serverType" />
+    <result column="is_relate_assets" jdbcType="INTEGER" property="isRelateAssets" />
+    <result column="engineer_id" jdbcType="BIGINT" property="engineerId" />
+    <result column="enterprise_id" jdbcType="BIGINT" property="enterpriseId" />
+    <result column="enterprise_employees" jdbcType="VARCHAR" property="enterpriseEmployees" />
+    <result column="if_use_parts" jdbcType="INTEGER" property="ifUseParts" />
+    <result column="estimate_service_cost" jdbcType="BIGINT" property="estimateServiceCost" />
+    <result column="total_cost" jdbcType="BIGINT" property="totalCost" />
+    <result column="repair_cost" jdbcType="BIGINT" property="repairCost" />
+    <result column="parts_cost" jdbcType="BIGINT" property="partsCost" />
+    <result column="settlement_status" jdbcType="VARCHAR" property="settlementStatus" />
+    <result column="payed" jdbcType="BIGINT" property="payed" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="service_cycle" jdbcType="INTEGER" property="serviceCycle" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.kongwu.insweb.entity.OrderWithBLOBs">
+    <result column="instruments" jdbcType="LONGVARCHAR" property="instruments" />
+    <result column="parts_list" jdbcType="LONGVARCHAR" property="partsList" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, customer_id, server_type, is_relate_assets, engineer_id, enterprise_id, enterprise_employees, 
+    if_use_parts, estimate_service_cost, total_cost, repair_cost, parts_cost, settlement_status, 
+    payed, status, service_cycle, type, remark, create_time, update_time
+  </sql>
+  <sql id="Blob_Column_List">
+    instruments, parts_list
+  </sql>
+  <select id="selectByExampleWithBLOBs" parameterType="com.kongwu.insweb.entity.OrderExample" resultMap="ResultMapWithBLOBs">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from order
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExample" parameterType="com.kongwu.insweb.entity.OrderExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from order
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from order
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from order
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.kongwu.insweb.entity.OrderExample">
+    delete from order
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.kongwu.insweb.entity.OrderWithBLOBs">
+    insert into order (id, customer_id, server_type, 
+      is_relate_assets, engineer_id, enterprise_id, 
+      enterprise_employees, if_use_parts, estimate_service_cost, 
+      total_cost, repair_cost, parts_cost, 
+      settlement_status, payed, status, 
+      service_cycle, type, remark, 
+      create_time, update_time, instruments, 
+      parts_list)
+    values (#{id,jdbcType=BIGINT}, #{customerId,jdbcType=BIGINT}, #{serverType,jdbcType=VARCHAR}, 
+      #{isRelateAssets,jdbcType=INTEGER}, #{engineerId,jdbcType=BIGINT}, #{enterpriseId,jdbcType=BIGINT}, 
+      #{enterpriseEmployees,jdbcType=VARCHAR}, #{ifUseParts,jdbcType=INTEGER}, #{estimateServiceCost,jdbcType=BIGINT}, 
+      #{totalCost,jdbcType=BIGINT}, #{repairCost,jdbcType=BIGINT}, #{partsCost,jdbcType=BIGINT}, 
+      #{settlementStatus,jdbcType=VARCHAR}, #{payed,jdbcType=BIGINT}, #{status,jdbcType=VARCHAR}, 
+      #{serviceCycle,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{instruments,jdbcType=LONGVARCHAR}, 
+      #{partsList,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.kongwu.insweb.entity.OrderWithBLOBs">
+    insert into order
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="customerId != null">
+        customer_id,
+      </if>
+      <if test="serverType != null">
+        server_type,
+      </if>
+      <if test="isRelateAssets != null">
+        is_relate_assets,
+      </if>
+      <if test="engineerId != null">
+        engineer_id,
+      </if>
+      <if test="enterpriseId != null">
+        enterprise_id,
+      </if>
+      <if test="enterpriseEmployees != null">
+        enterprise_employees,
+      </if>
+      <if test="ifUseParts != null">
+        if_use_parts,
+      </if>
+      <if test="estimateServiceCost != null">
+        estimate_service_cost,
+      </if>
+      <if test="totalCost != null">
+        total_cost,
+      </if>
+      <if test="repairCost != null">
+        repair_cost,
+      </if>
+      <if test="partsCost != null">
+        parts_cost,
+      </if>
+      <if test="settlementStatus != null">
+        settlement_status,
+      </if>
+      <if test="payed != null">
+        payed,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="serviceCycle != null">
+        service_cycle,
+      </if>
+      <if test="type != null">
+        type,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="instruments != null">
+        instruments,
+      </if>
+      <if test="partsList != null">
+        parts_list,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="customerId != null">
+        #{customerId,jdbcType=BIGINT},
+      </if>
+      <if test="serverType != null">
+        #{serverType,jdbcType=VARCHAR},
+      </if>
+      <if test="isRelateAssets != null">
+        #{isRelateAssets,jdbcType=INTEGER},
+      </if>
+      <if test="engineerId != null">
+        #{engineerId,jdbcType=BIGINT},
+      </if>
+      <if test="enterpriseId != null">
+        #{enterpriseId,jdbcType=BIGINT},
+      </if>
+      <if test="enterpriseEmployees != null">
+        #{enterpriseEmployees,jdbcType=VARCHAR},
+      </if>
+      <if test="ifUseParts != null">
+        #{ifUseParts,jdbcType=INTEGER},
+      </if>
+      <if test="estimateServiceCost != null">
+        #{estimateServiceCost,jdbcType=BIGINT},
+      </if>
+      <if test="totalCost != null">
+        #{totalCost,jdbcType=BIGINT},
+      </if>
+      <if test="repairCost != null">
+        #{repairCost,jdbcType=BIGINT},
+      </if>
+      <if test="partsCost != null">
+        #{partsCost,jdbcType=BIGINT},
+      </if>
+      <if test="settlementStatus != null">
+        #{settlementStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="payed != null">
+        #{payed,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="serviceCycle != null">
+        #{serviceCycle,jdbcType=INTEGER},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="instruments != null">
+        #{instruments,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="partsList != null">
+        #{partsList,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.kongwu.insweb.entity.OrderExample" resultType="java.lang.Integer">
+    select count(*) from order
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update order
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.customerId != null">
+        customer_id = #{record.customerId,jdbcType=BIGINT},
+      </if>
+      <if test="record.serverType != null">
+        server_type = #{record.serverType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isRelateAssets != null">
+        is_relate_assets = #{record.isRelateAssets,jdbcType=INTEGER},
+      </if>
+      <if test="record.engineerId != null">
+        engineer_id = #{record.engineerId,jdbcType=BIGINT},
+      </if>
+      <if test="record.enterpriseId != null">
+        enterprise_id = #{record.enterpriseId,jdbcType=BIGINT},
+      </if>
+      <if test="record.enterpriseEmployees != null">
+        enterprise_employees = #{record.enterpriseEmployees,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ifUseParts != null">
+        if_use_parts = #{record.ifUseParts,jdbcType=INTEGER},
+      </if>
+      <if test="record.estimateServiceCost != null">
+        estimate_service_cost = #{record.estimateServiceCost,jdbcType=BIGINT},
+      </if>
+      <if test="record.totalCost != null">
+        total_cost = #{record.totalCost,jdbcType=BIGINT},
+      </if>
+      <if test="record.repairCost != null">
+        repair_cost = #{record.repairCost,jdbcType=BIGINT},
+      </if>
+      <if test="record.partsCost != null">
+        parts_cost = #{record.partsCost,jdbcType=BIGINT},
+      </if>
+      <if test="record.settlementStatus != null">
+        settlement_status = #{record.settlementStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="record.payed != null">
+        payed = #{record.payed,jdbcType=BIGINT},
+      </if>
+      <if test="record.status != null">
+        status = #{record.status,jdbcType=VARCHAR},
+      </if>
+      <if test="record.serviceCycle != null">
+        service_cycle = #{record.serviceCycle,jdbcType=INTEGER},
+      </if>
+      <if test="record.type != null">
+        type = #{record.type,jdbcType=VARCHAR},
+      </if>
+      <if test="record.remark != null">
+        remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateTime != null">
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.instruments != null">
+        instruments = #{record.instruments,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.partsList != null">
+        parts_list = #{record.partsList,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map">
+    update order
+    set id = #{record.id,jdbcType=BIGINT},
+      customer_id = #{record.customerId,jdbcType=BIGINT},
+      server_type = #{record.serverType,jdbcType=VARCHAR},
+      is_relate_assets = #{record.isRelateAssets,jdbcType=INTEGER},
+      engineer_id = #{record.engineerId,jdbcType=BIGINT},
+      enterprise_id = #{record.enterpriseId,jdbcType=BIGINT},
+      enterprise_employees = #{record.enterpriseEmployees,jdbcType=VARCHAR},
+      if_use_parts = #{record.ifUseParts,jdbcType=INTEGER},
+      estimate_service_cost = #{record.estimateServiceCost,jdbcType=BIGINT},
+      total_cost = #{record.totalCost,jdbcType=BIGINT},
+      repair_cost = #{record.repairCost,jdbcType=BIGINT},
+      parts_cost = #{record.partsCost,jdbcType=BIGINT},
+      settlement_status = #{record.settlementStatus,jdbcType=VARCHAR},
+      payed = #{record.payed,jdbcType=BIGINT},
+      status = #{record.status,jdbcType=VARCHAR},
+      service_cycle = #{record.serviceCycle,jdbcType=INTEGER},
+      type = #{record.type,jdbcType=VARCHAR},
+      remark = #{record.remark,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      instruments = #{record.instruments,jdbcType=LONGVARCHAR},
+      parts_list = #{record.partsList,jdbcType=LONGVARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update order
+    set id = #{record.id,jdbcType=BIGINT},
+      customer_id = #{record.customerId,jdbcType=BIGINT},
+      server_type = #{record.serverType,jdbcType=VARCHAR},
+      is_relate_assets = #{record.isRelateAssets,jdbcType=INTEGER},
+      engineer_id = #{record.engineerId,jdbcType=BIGINT},
+      enterprise_id = #{record.enterpriseId,jdbcType=BIGINT},
+      enterprise_employees = #{record.enterpriseEmployees,jdbcType=VARCHAR},
+      if_use_parts = #{record.ifUseParts,jdbcType=INTEGER},
+      estimate_service_cost = #{record.estimateServiceCost,jdbcType=BIGINT},
+      total_cost = #{record.totalCost,jdbcType=BIGINT},
+      repair_cost = #{record.repairCost,jdbcType=BIGINT},
+      parts_cost = #{record.partsCost,jdbcType=BIGINT},
+      settlement_status = #{record.settlementStatus,jdbcType=VARCHAR},
+      payed = #{record.payed,jdbcType=BIGINT},
+      status = #{record.status,jdbcType=VARCHAR},
+      service_cycle = #{record.serviceCycle,jdbcType=INTEGER},
+      type = #{record.type,jdbcType=VARCHAR},
+      remark = #{record.remark,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.kongwu.insweb.entity.OrderWithBLOBs">
+    update order
+    <set>
+      <if test="customerId != null">
+        customer_id = #{customerId,jdbcType=BIGINT},
+      </if>
+      <if test="serverType != null">
+        server_type = #{serverType,jdbcType=VARCHAR},
+      </if>
+      <if test="isRelateAssets != null">
+        is_relate_assets = #{isRelateAssets,jdbcType=INTEGER},
+      </if>
+      <if test="engineerId != null">
+        engineer_id = #{engineerId,jdbcType=BIGINT},
+      </if>
+      <if test="enterpriseId != null">
+        enterprise_id = #{enterpriseId,jdbcType=BIGINT},
+      </if>
+      <if test="enterpriseEmployees != null">
+        enterprise_employees = #{enterpriseEmployees,jdbcType=VARCHAR},
+      </if>
+      <if test="ifUseParts != null">
+        if_use_parts = #{ifUseParts,jdbcType=INTEGER},
+      </if>
+      <if test="estimateServiceCost != null">
+        estimate_service_cost = #{estimateServiceCost,jdbcType=BIGINT},
+      </if>
+      <if test="totalCost != null">
+        total_cost = #{totalCost,jdbcType=BIGINT},
+      </if>
+      <if test="repairCost != null">
+        repair_cost = #{repairCost,jdbcType=BIGINT},
+      </if>
+      <if test="partsCost != null">
+        parts_cost = #{partsCost,jdbcType=BIGINT},
+      </if>
+      <if test="settlementStatus != null">
+        settlement_status = #{settlementStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="payed != null">
+        payed = #{payed,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="serviceCycle != null">
+        service_cycle = #{serviceCycle,jdbcType=INTEGER},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="instruments != null">
+        instruments = #{instruments,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="partsList != null">
+        parts_list = #{partsList,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.kongwu.insweb.entity.OrderWithBLOBs">
+    update order
+    set customer_id = #{customerId,jdbcType=BIGINT},
+      server_type = #{serverType,jdbcType=VARCHAR},
+      is_relate_assets = #{isRelateAssets,jdbcType=INTEGER},
+      engineer_id = #{engineerId,jdbcType=BIGINT},
+      enterprise_id = #{enterpriseId,jdbcType=BIGINT},
+      enterprise_employees = #{enterpriseEmployees,jdbcType=VARCHAR},
+      if_use_parts = #{ifUseParts,jdbcType=INTEGER},
+      estimate_service_cost = #{estimateServiceCost,jdbcType=BIGINT},
+      total_cost = #{totalCost,jdbcType=BIGINT},
+      repair_cost = #{repairCost,jdbcType=BIGINT},
+      parts_cost = #{partsCost,jdbcType=BIGINT},
+      settlement_status = #{settlementStatus,jdbcType=VARCHAR},
+      payed = #{payed,jdbcType=BIGINT},
+      status = #{status,jdbcType=VARCHAR},
+      service_cycle = #{serviceCycle,jdbcType=INTEGER},
+      type = #{type,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      instruments = #{instruments,jdbcType=LONGVARCHAR},
+      parts_list = #{partsList,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.kongwu.insweb.entity.Order">
+    update order
+    set customer_id = #{customerId,jdbcType=BIGINT},
+      server_type = #{serverType,jdbcType=VARCHAR},
+      is_relate_assets = #{isRelateAssets,jdbcType=INTEGER},
+      engineer_id = #{engineerId,jdbcType=BIGINT},
+      enterprise_id = #{enterpriseId,jdbcType=BIGINT},
+      enterprise_employees = #{enterpriseEmployees,jdbcType=VARCHAR},
+      if_use_parts = #{ifUseParts,jdbcType=INTEGER},
+      estimate_service_cost = #{estimateServiceCost,jdbcType=BIGINT},
+      total_cost = #{totalCost,jdbcType=BIGINT},
+      repair_cost = #{repairCost,jdbcType=BIGINT},
+      parts_cost = #{partsCost,jdbcType=BIGINT},
+      settlement_status = #{settlementStatus,jdbcType=VARCHAR},
+      payed = #{payed,jdbcType=BIGINT},
+      status = #{status,jdbcType=VARCHAR},
+      service_cycle = #{serviceCycle,jdbcType=INTEGER},
+      type = #{type,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

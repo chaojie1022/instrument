@@ -17,18 +17,18 @@
                         password="root"/>
 
         <javaModelGenerator targetPackage="com.kongwu.insweb.entity"
-                            targetProject="C:/idea_workcpace/instrument/ins-web/src/main/java">
+                            targetProject="D:/intlliJ_workspace/instrument/ins-web/src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
         <sqlMapGenerator targetPackage="com.kongwu.insweb.entity.xml"
-                         targetProject="C:/idea_workcpace/instrument/ins-web/src/main/java">
+                         targetProject="D:/intlliJ_workspace/instrument/ins-web/src/main/java">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
         <javaClientGenerator targetPackage="com.kongwu.insweb.mapper"
-                             targetProject="C:/idea_workcpace/instrument/ins-web/src/main/java" type="XMLMAPPER">
+                             targetProject="D:/intlliJ_workspace/instrument/ins-web/src/main/java" type="XMLMAPPER">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
@@ -69,6 +69,11 @@
                selectByExampleQueryId="true">
         </table>
         <table tableName="order_parts_rel" domainObjectName="OrderPartsRel"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true">
+        </table>
+        <table tableName="role" domainObjectName="Role"
                enableCountByExample="true" enableUpdateByExample="true"
                enableDeleteByExample="true" enableSelectByExample="true"
                selectByExampleQueryId="true">

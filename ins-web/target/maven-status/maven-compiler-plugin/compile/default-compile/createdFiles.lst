@@ -106,6 +106,7 @@ com\kongwu\insweb\mapper\UserServiceEnterpriseMapper.class
 com\kongwu\insweb\mapper\InstrumentCategroyMapper.class
 com\kongwu\insweb\entity\Instrument.class
 com\kongwu\insweb\utils\HttpRequest$8.class
+com\kongwu\insweb\freemarker\MyFreeMarkerView.class
 com\kongwu\insweb\entity\OrderWithBLOBs.class
 com\kongwu\insweb\entity\UserOperatorExample$GeneratedCriteria.class
 com\kongwu\insweb\utils\HttpRequest$RequestOutputStream.class
@@ -118,6 +119,7 @@ com\kongwu\insweb\freemarker\staticfunction\FreemarkerFunction.class
 com\kongwu\insweb\utils\HttpRequest$2.class
 com\kongwu\insweb\entity\WorkOrderExample$GeneratedCriteria.class
 com\kongwu\insweb\utils\HttpRequest$ConnectionFactory$1.class
+com\kongwu\insweb\controller\login\LoginController.class
 com\kongwu\insweb\mapper\InstrumentMapper.class
 com\kongwu\insweb\spring\SpringUtils.class
 com\kongwu\insweb\entity\OrderPartsRelExample$Criterion.class

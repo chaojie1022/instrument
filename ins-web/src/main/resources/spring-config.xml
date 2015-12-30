@@ -15,7 +15,7 @@
 	    http://www.springframework.org/schema/task/spring-task-3.0.xsd">
 
     <context:property-placeholder location="classpath:resources.properties"/>
-
+    <context:annotation-config />
 
     <!-- 扫描注解Bean annotation-config="false" -->
     <context:component-scan base-package="com.kongwu.insweb">
@@ -28,12 +28,10 @@
     <task:executor id="myExecutor" pool-size="2"/>
     <task:executor id="AutoBuildExecutor" pool-size="10"/>
 
-    <!-- 开启AOP监听 只对当前配置文件有效 -->
-    <aop:aspectj-autoproxy expose-proxy="true"/>
 
 
     <!--***************************************************** system数据源 ***************************************************** -->
-    <bean id="systemDataSource" class="com.alibaba.druid.pool.DruidDataSource"
+    <bean id="druidDataSource" class="com.alibaba.druid.pool.DruidDataSource"
           init-method="init" destroy-method="close">
         <!-- 基本属性 url、user、password -->
         <property name="url" value="${connection.systemurl}"/>
@@ -69,26 +67,16 @@
 
     </bean>
 
-    <bean id="systemDataSourceProxy"
-          class="org.springframework.jdbc.datasource.TransactionAwareDataSourceProxy">
-        <property name="targetDataSource" ref="systemDataSource"/>
+
+
+
+    <!-- transaction support-->
+    <!-- PlatformTransactionMnager -->
+    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="druidDataSource" />
     </bean>
-
-    <!--事务管理器配置 -->
-    <bean id="systemTransactionManager"
-          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-        <property name="dataSource" ref="systemDataSourceProxy"/>
-    </bean>
-
-    <tx:advice id="txAdvice_sys" transaction-manager="systemTransactionManager">
-        <tx:attributes>
-            <tx:method name="*" propagation="REQUIRED"/>
-        </tx:attributes>
-    </tx:advice>
-
-
-
-
+    <!-- enable transaction annotation support -->
+    <tx:annotation-driven transaction-manager="txManager" />
     <!-- 配置spring 的 email服务 -->
     <bean id="JavaMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
         <property name="host" value="${mail.host}"/>
@@ -105,5 +93,6 @@
         </property>
     </bean>
 
-
+    <import resource="spring-mvc-shiro.xml"/>
+    <import resource="spring-config-cache.xml"/>
 </beans>

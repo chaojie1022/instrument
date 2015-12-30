@@ -1,7 +1,183 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ff79680b-fc45-49bf-86d0-b9c36ef55843" name="Default" comment="" />
+    <list default="true" id="ff79680b-fc45-49bf-86d0-b9c36ef55843" name="Default" comment="springmvc配置&#10;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ehcache_ehcache_core_2_5_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_core_1_2_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_ehcache_1_2_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_quartz_1_2_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_spring_1_2_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_web_1_2_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opensymphony_quartz_quartz_1_6_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/controller/login/LoginController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/credentials/RetryLimitHashedCredentialsMatcher.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/freemarker/MyFreeMarkerView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/realm/UserRealm.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/security/LoginHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/service/SecurityService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/spring/SpringCacheManagerWrapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/EncryptUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/UUIDGenerator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/resources/ehcache/ehcache.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/resources/spring-config-cache.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/resources/spring-mvc-shiro.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/webapp/WEB-INF/views/login.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/controller/BaseController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/controller/UploadController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/controller/index/IndexController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/CustomerAssets.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/CustomerAssetsExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/Instrument.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/InstrumentCategroy.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/InstrumentCategroyExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/InstrumentExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/InstrumentParts.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/InstrumentPartsCategroy.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/InstrumentPartsCategroyExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/InstrumentPartsExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/Order.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/OrderExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/OrderInstrument.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/OrderInstrumentExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/OrderPartsRel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/OrderPartsRelExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/OrderWithBLOBs.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/RoleUserRel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/RoleUserRelExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/Service.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/ServiceExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/User.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/UserCustomer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/UserCustomerExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/UserEngineer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/UserEngineerExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/UserExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/UserInfo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/UserInfoExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/UserOperator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/UserOperatorExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/UserServiceEnterprise.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/UserServiceEnterpriseEmployee.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/UserServiceEnterpriseEmployeeExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/UserServiceEnterpriseExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/WorkOrder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/WorkOrderExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/userAdmin.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/userAdminExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/CustomerAssetsMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/InstrumentCategroyMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/InstrumentMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/InstrumentPartsCategroyMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/InstrumentPartsMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/OrderInstrumentMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/OrderMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/OrderPartsRelMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/RoleUserRelMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/ServiceMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/UserCustomerMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/UserEngineerMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/UserInfoMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/UserMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/UserOperatorMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/UserServiceEnterpriseEmployeeMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/UserServiceEnterpriseMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/WorkOrderMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/entity/xml/userAdminMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/exception/DefaultExceptionHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/freemarker/directive/BlockDirective.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/freemarker/directive/DirectiveUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/freemarker/directive/ExtendsDirective.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/freemarker/directive/OverrideDirective.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/freemarker/directive/TemplateDirectiveBodyOverrideWraper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/freemarker/staticfunction/FreemarkerFunction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/json/FastJsonHttpMessageConverter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/json/JSONResult.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/json/StringHttpMessageConverter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/CustomerAssetsMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/InstrumentCategroyMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/InstrumentMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/InstrumentPartsCategroyMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/InstrumentPartsMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/OrderInstrumentMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/OrderMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/OrderPartsRelMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/RoleUserRelMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/ServiceMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/UserCustomerMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/UserEngineerMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/UserInfoMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/UserMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/UserOperatorMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/UserServiceEnterpriseEmployeeMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/UserServiceEnterpriseMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/WorkOrderMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/mapper/userAdminMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/spring/SpringUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/Constants.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/DateUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/EmailLogin.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/FreemarkerUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/GetWebPage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/HtmlRegUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/HtmlToPlainText.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/HttpRequest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/HttpsUpload.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/IdGenerator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/ImgUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/ReadExcel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/ServiceUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/StreamGobbler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/StringHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/utils/ToolUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/resources/freemarkerstatic.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/resources/generatorConfig.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/resources/log4j.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/resources/resources.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/resources/spring-config.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-wechat/src/main/resources/spring-mvc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/target/classes/com/kongwu/insweb/controller/index/IndexController.class" afterPath="$PROJECT_DIR$/ins-web/target/classes/com/kongwu/insweb/controller/index/IndexController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/target/classes/com/kongwu/insweb/utils/Constants.class" afterPath="$PROJECT_DIR$/ins-web/target/classes/com/kongwu/insweb/utils/Constants.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/target/classes/com/kongwu/insweb/utils/ImgUtils.class" afterPath="$PROJECT_DIR$/ins-web/target/classes/com/kongwu/insweb/utils/ImgUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/ins_web_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/ins_web_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/ins-web.iml" afterPath="$PROJECT_DIR$/ins-web/ins-web.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/pom.xml" afterPath="$PROJECT_DIR$/ins-web/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/controller/UploadController.java" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/controller/UploadController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/controller/index/IndexController.java" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/controller/index/IndexController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/RoleUserRel.java" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/RoleUserRel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/RoleUserRelExample.java" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/RoleUserRelExample.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/CustomerAssetsMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/CustomerAssetsMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/InstrumentCategroyMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/InstrumentCategroyMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/InstrumentMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/InstrumentMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/InstrumentPartsCategroyMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/InstrumentPartsCategroyMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/InstrumentPartsMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/InstrumentPartsMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/OrderMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/OrderMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/OrderPartsRelMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/OrderPartsRelMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/RoleUserRelMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/RoleUserRelMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/ServiceMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/ServiceMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserCustomerMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserCustomerMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserEngineerMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserEngineerMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserInfoMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserInfoMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserOperatorMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserOperatorMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserServiceEnterpriseEmployeeMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserServiceEnterpriseEmployeeMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserServiceEnterpriseMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserServiceEnterpriseMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/WorkOrderMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/WorkOrderMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/userAdminMapper.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/userAdminMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/mapper/RoleUserRelMapper.java" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/mapper/RoleUserRelMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/Constants.java" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/Constants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/ImgUtils.java" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/ImgUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/resources/generatorConfig.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/resources/generatorConfig.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/resources/spring-config.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/resources/spring-config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/resources/spring-mvc.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/resources/spring-mvc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/ins-web/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/webapp/assets/app/css/app.css" afterPath="$PROJECT_DIR$/ins-web/src/main/webapp/assets/app/css/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/target/classes/spring-config.xml" afterPath="$PROJECT_DIR$/ins-web/target/classes/spring-config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/target/classes/spring-mvc.xml" afterPath="$PROJECT_DIR$/ins-web/target/classes/spring-mvc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/ins-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-wechat/ins-wechat.iml" afterPath="$PROJECT_DIR$/ins-wechat/ins-wechat.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+    </list>
     <ignored path="instrument.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -26,11 +202,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IndexController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/controller/index/IndexController.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ins-web/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42095238">
-              <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+            <state vertical-scroll-proportion="-27.538462">
+              <caret line="249" column="22" selection-start-line="249" selection-start-column="22" selection-end-line="249" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SecurityService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/service/SecurityService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="22" column="67" selection-start-line="22" selection-start-column="67" selection-end-line="22" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -38,94 +224,93 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="resources.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ins-web/src/main/resources/resources.properties">
+      <file leaf-file-name="Role.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/Role.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="freemarkerstatic.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ins-web/src/main/resources/freemarkerstatic.properties">
+      <file leaf-file-name="RoleExample.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/RoleExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="1.3496622">
+              <caret line="450" column="9" selection-start-line="450" selection-start-column="9" selection-end-line="450" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ins-web/pom.xml">
+      <file leaf-file-name="RoleMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/RoleMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="15.461538">
-              <caret line="219" column="22" selection-start-line="219" selection-start-column="15" selection-end-line="219" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spring-mvc.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ins-web/src/main/resources/spring-mvc.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.037037">
-              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ins-wechat/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-23.538462">
-              <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spring-config.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ins-web/src/main/resources/spring-config.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.092592">
-              <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+            <state vertical-scroll-proportion="-40.73077">
+              <caret line="244" column="10" selection-start-line="244" selection-start-column="10" selection-end-line="244" selection-end-column="10" />
               <folding>
-                <element signature="e#3497#3515#0" expanded="true" />
-                <element signature="e#4327#4341#0" expanded="true" />
+                <marker date="1451459346974" expanded="true" signature="3828:3927" placeholder="select from ..role..." />
+                <marker date="1451459346974" expanded="true" signature="4011:4064" placeholder="delete from ..." />
+                <marker date="1451459346974" expanded="true" signature="4167:4183" placeholder="delete from ..." />
+                <marker date="1451459346974" expanded="true" signature="4363:4730" placeholder="insert into role..." />
+                <marker date="1451459346974" expanded="true" signature="6304:6329" placeholder="select count..role..." />
+                <marker date="1451459346974" expanded="true" signature="7577:8011" placeholder="update role ..." />
+                <marker date="1451459346974" expanded="true" signature="8222:8972" placeholder="update role ..." />
+                <marker date="1451459346974" expanded="true" signature="9071:9452" placeholder="update role ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ins-web/src/main/webapp/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ins-web/src/main/webapp/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.307693">
-              <caret line="70" column="18" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/controller/BaseController.java">
+      <file leaf-file-name="UserExample.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/UserExample.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <caret line="597" column="32" selection-start-line="597" selection-start-column="32" selection-end-line="597" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserRealm.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/realm/UserRealm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="30" column="52" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="generatorConfig.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ins-web/src/main/resources/generatorConfig.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.65384614">
+              <caret line="71" column="71" selection-start-line="71" selection-start-column="71" selection-end-line="71" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Autowired.java" pinned="false" current-in-tab="false">
+        <entry file="jar://D:/repository/org/springframework/spring-beans/4.2.2.RELEASE/spring-beans-4.2.2.RELEASE-sources.jar!/org/springframework/beans/factory/annotation/Autowired.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#3176#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/mapper/UserMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -156,31 +341,51 @@
         <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/HtmlToPlainText.java" />
         <option value="$PROJECT_DIR$/ins-web/src/main/java/controller/BaseController.java" />
         <option value="$PROJECT_DIR$/ins-web/src/main/java/controller/upload/UploadController.java" />
-        <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/controller/BaseController.java" />
-        <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/controller/UploadController.java" />
         <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/json/FastJsonHttpMessageConverter.java" />
         <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/spring/SpringCacheManagerWrapper.java" />
         <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/spring/SpringUtils.java" />
         <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/freemarker/directive/TemplateDirectiveBodyOverrideWraper.java" />
         <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/freemarker/directive/BlockDirective.java" />
         <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/exception/DefaultExceptionHandler.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/ins-web/src/main/webapp/WEB-INF/views/index.ftl" />
         <option value="$PROJECT_DIR$/ins-web/src/main/resources/resources.properties" />
         <option value="$PROJECT_DIR$/ins-web/src/main/resources/spring-config-cache.xml" />
         <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/filter/SysUserFilter.java" />
         <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/freemarker/staticfunction/FreemarkerFunction.java" />
         <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/freemarker/directive/DirectiveUtils.java" />
-        <option value="$PROJECT_DIR$/ins-web/src/main/resources/generatorConfig.xml" />
         <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/mapper/CustomerAssetsMapper.java" />
         <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/StreamGobbler.java" />
         <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/freemarker/directive/OverrideDirective.java" />
         <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/ToolUtil.java" />
-        <option value="$PROJECT_DIR$/ins-web/pom.xml" />
-        <option value="$PROJECT_DIR$/ins-web/src/main/resources/spring-config.xml" />
-        <option value="$PROJECT_DIR$/ins-web/src/main/resources/spring-mvc.xml" />
-        <option value="$PROJECT_DIR$/ins-web/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/ins-wechat/src/main/java/insweb/json/JSONResult.java" />
         <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/controller/index/IndexController.java" />
+        <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/controller/login/LoginController.java" />
+        <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/freemarker/MyFreeMarkerView.java" />
+        <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/Constants.java" />
+        <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/ImgUtils.java" />
+        <option value="$PROJECT_DIR$/ins-web/src/main/webapp/WEB-INF/views/login.ftl" />
+        <option value="$PROJECT_DIR$/ins-web/src/main/webapp/assets/app/css/app.css" />
+        <option value="$PROJECT_DIR$/init.sql" />
+        <option value="$PROJECT_DIR$/ins-web/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/ins-web/src/main/resources/spring-security.xml" />
+        <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/security/LoginHandler.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/ins-web/src/main/resources/spring-mvc.xml" />
+        <option value="$PROJECT_DIR$/ins-web/src/main/resources/spring-config.xml" />
+        <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/credentials/RetryLimitHashedCredentialsMatcher.java" />
+        <option value="$PROJECT_DIR$/ins-web/src/main/resources/spring-mvc-shiro.xml" />
+        <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/userAdmin.java" />
+        <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserAdminMapper.xml" />
+        <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/mapper/UserAdminMapper.java" />
+        <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/controller/UploadController.java" />
+        <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/controller/BaseController.java" />
+        <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/UUIDGenerator.java" />
+        <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/EncryptUtils.java" />
+        <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/service/SecurityService.java" />
+        <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/realm/UserRealm.java" />
+        <option value="$PROJECT_DIR$/ins-web/pom.xml" />
+        <option value="$PROJECT_DIR$/ins-web/src/main/resources/generatorConfig.xml" />
+        <option value="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/UserExample.java" />
       </list>
     </option>
   </component>
@@ -192,10 +397,17 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="alwaysUpdateSnapshots" value="true" />
         <option name="localRepository" value="D:\repository" />
-        <option name="mavenHome" value="C:/soft/apache-maven-3.2.5" />
-        <option name="userSettingsFile" value="C:\soft\apache-maven-3.2.5\conf\settings.xml" />
+        <option name="mavenHome" value="d:/soft/apache-maven-3.2.5" />
+        <option name="userSettingsFile" value="d:\soft\apache-maven-3.2.5\conf\settings.xml" />
       </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="createModuleGroups" value="true" />
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="MavenProjectNavigator">
@@ -205,16 +417,6 @@
           <option name="myItemId" value="" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="instrument" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
       </PATH>
       <PATH>
         <PATH_ELEMENT>
@@ -222,7 +424,7 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="ins-web" />
+          <option name="myItemId" value="ins-wechat" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -234,10 +436,6 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="ins-web" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Plugins" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
         </PATH_ELEMENT>
       </PATH>
       <PATH>
@@ -252,10 +450,6 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="Plugins" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="jetty" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginNode" />
         </PATH_ELEMENT>
       </PATH>
       <PATH>
@@ -272,17 +466,45 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="clean" />
+          <option name="myItemId" value="mybatis-generator" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginNode" />
         </PATH_ELEMENT>
       </PATH>
     </treeState>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="#JAVA_HOME" />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>CodeSpring CoreSpring</id>
+          </State>
+          <State>
+            <id>Spring</id>
+          </State>
+          <State>
+            <id>Spring CoreSpring</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>SpringJavaAutowiringInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -291,7 +513,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -310,7 +532,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -339,68 +560,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ins-wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ins-wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ins-wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="ins-web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -458,70 +617,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ins-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ins-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -581,86 +676,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ins-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="insweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ins-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="insweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -671,16 +695,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kongwu.insweb.realm" />
+      <recent name="com.kongwu.insweb.credentials" />
+      <recent name="com.kongwu.insweb.controller.login" />
       <recent name="com.kongwu.insweb.controller.index" />
       <recent name="com.kongwu.insweb.exception" />
-      <recent name="com.kongwu.insweb.controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\idea_workcpace\instrument\ins-web\src\main\webapp" />
-      <recent name="D:\intlliJ_workspace\instrument\ins-web\src\main\webapp\WEB-INF\views\base" />
-      <recent name="D:\intlliJ_workspace\instrument\ins-web\src\main\webapp\assets" />
+      <recent name="D:\intlliJ_workspace\instrument\ins-web\src\main\java\com\kongwu\insweb\utils" />
+      <recent name="D:\intlliJ_workspace\instrument\ins-web\src\main\resources" />
       <recent name="D:\intlliJ_workspace\instrument\ins-web\src\main\java\com\kongwu\insweb" />
-      <recent name="D:\intlliJ_workspace\instrument\ins-web\src\main\java" />
+      <recent name="D:\intlliJ_workspace\instrument\ins-web\src\main\webapp\WEB-INF\views" />
+      <recent name="D:\intlliJ_workspace\instrument\ins-wechat\src\main\resources" />
     </key>
   </component>
   <component name="RunManager" selected="Maven.ins-web [jetty:run]">
@@ -1163,11 +1189,22 @@
       <workItem from="1451400490950" duration="651000" />
       <workItem from="1451401264993" duration="2090000" />
       <workItem from="1451403366256" duration="2329000" />
+      <workItem from="1451437606450" duration="5474000" />
+      <workItem from="1451450262771" duration="94000" />
+      <workItem from="1451450368051" duration="760000" />
+      <workItem from="1451451134316" duration="8657000" />
     </task>
+    <task id="LOCAL-00001" summary="1">
+      <created>1451459797399</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1451459797399</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14315000" />
+    <option name="totallyTimeSpent" value="29300000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1179,8 +1216,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1188,25 +1225,26 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27292112" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2793177" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32792208" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25586355" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3997833" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13744588" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1247,6 +1285,11 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="springmvc配置&#10;" />
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="5" />
@@ -1258,98 +1301,85 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/StringHelper.java">
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/controller/index/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/controller/login/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/freemarker/MyFreeMarkerView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2037037">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/ImgUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="90" column="15" selection-start-line="90" selection-start-column="15" selection-end-line="90" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <marker date="1451446106578" expanded="true" signature="861:1356" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/webapp/assets/app/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20964126">
+          <caret line="11" column="26" selection-start-line="0" selection-start-column="0" selection-end-line="81" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/webapp/WEB-INF/views/login.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/webapp/assets/app/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7722" column="19" selection-start-line="7722" selection-start-column="16" selection-end-line="7722" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/repository/org/apache/poi/poi-ooxml/3.13/poi-ooxml-3.13.jar!/META-INF/MANIFEST.MF">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/HttpRequest.java">
+    <entry file="file://$PROJECT_DIR$/instrument.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/GetWebPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/ServiceUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/HtmlToPlainText.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/controller/UploadController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/json/StringHttpMessageConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/json/JSONResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/json/FastJsonHttpMessageConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/freemarker/directive/ExtendsDirective.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/spring/SpringUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/webapp/assets/app/js/demo/demo-rtl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/webapp/WEB-INF/views/base/base.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/resources/jetty-context.xml">
+    <entry file="file://D:/repository/org/springframework/spring-webmvc/4.2.2.RELEASE/spring-webmvc-4.2.2.RELEASE.pom">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1357,218 +1387,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/exception/DefaultExceptionHandler.java">
+    <entry file="file://$PROJECT_DIR$/init.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/freemarker/directive/BlockDirective.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/DateUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/freemarker/staticfunction/FreemarkerFunction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/freemarker/directive/DirectiveUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="49" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/CustomerAssetsMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-307.42307">
-          <caret line="587" column="26" selection-start-line="587" selection-start-column="26" selection-end-line="587" selection-end-column="26" />
-          <folding>
-            <marker date="1451403477204" expanded="true" signature="86849:87236" placeholder="..." />
-            <marker date="1451403477204" expanded="true" signature="86849:87246" placeholder="..." />
-            <marker date="1451403477204" expanded="true" signature="86855:87225" placeholder="update custo..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-wechat/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2692308">
-          <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/CustomerAssets.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.3.0/mybatis-3.3.0.jar!/org/apache/ibatis/annotations/Param.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.857143">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/soft/jdk1.7.0_79/src.zip!/java/lang/Long.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/CustomerAssetsExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="635" column="0" selection-start-line="635" selection-start-column="0" selection-end-line="635" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/InstrumentPartsCategroyMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="392" column="0" selection-start-line="392" selection-start-column="0" selection-end-line="392" selection-end-column="0" />
-          <folding>
-            <marker date="1451403477966" expanded="true" signature="29272:29881" placeholder="..." />
-            <marker date="1451403477966" expanded="true" signature="29272:89211" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/OrderInstrumentMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="208" column="0" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
-          <folding>
-            <marker date="1451403478136" expanded="true" signature="15524:15807" placeholder="..." />
-            <marker date="1451403478136" expanded="true" signature="15524:47005" placeholder="..." />
-            <marker date="1451403478136" expanded="true" signature="15530:15796" placeholder="update order..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/userAdminMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="240" column="0" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
-          <folding>
-            <marker date="1451403478300" expanded="true" signature="16843:17175" placeholder="..." />
-            <marker date="1451403478300" expanded="true" signature="16843:51121" placeholder="..." />
-            <marker date="1451403478300" expanded="true" signature="16849:17164" placeholder="update user_..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserInfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-55.576923">
-          <caret line="659" column="41" selection-start-line="659" selection-start-column="41" selection-end-line="659" selection-end-column="41" />
-          <folding>
-            <marker date="1451403478499" expanded="true" signature="20419:20906" placeholder="..." />
-            <marker date="1451403478499" expanded="true" signature="20419:62316" placeholder="..." />
-            <marker date="1451403478499" expanded="true" signature="20425:20895" placeholder="update useri..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/mapper/InstrumentCategroyMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.23085847">
+          <caret line="406" column="0" selection-start-line="406" selection-start-column="0" selection-end-line="406" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/mapper/CustomerAssetsMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="42" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/StreamGobbler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="53" selection-start-line="0" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/freemarker/directive/TemplateDirectiveBodyOverrideWraper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/freemarker/directive/OverrideDirective.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/ToolUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="52" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="52" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/resources/generatorConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="28.76923">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.2.2.RELEASE/spring-webmvc-4.2.2.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.678571">
-          <caret line="232" column="16" selection-start-line="232" selection-start-column="16" selection-end-line="232" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-core-asl/1.7.3/jackson-core-asl-1.7.3.jar!/org/codehaus/jackson/JsonProcessingException.class">
+    <entry file="file://D:/repository/org/springframework/spring-orm/4.2.2.RELEASE/spring-orm-4.2.2.RELEASE.pom">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#1703#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-core-asl/1.7.3/jackson-core-asl-1.7.3.pom">
+    <entry file="jar://D:/repository/org/springframework/security/spring-security-config/4.0.3.RELEASE/spring-security-config-4.0.3.RELEASE.jar!/org/springframework/security/config/spring-security-3.2.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4140435">
+          <caret line="66" column="19" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/repository/org/springframework/security/spring-security-config/4.0.3.RELEASE/spring-security-config-4.0.3.RELEASE.jar!/org/springframework/security/config/spring-security-3.0.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/repository/org/springframework/security/spring-security-config/4.0.3.RELEASE/spring-security-config-4.0.3.RELEASE.jar!/org/springframework/security/config/spring-security-4.0.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/security/LoginHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/repository/org/springframework/security/spring-security-config/4.0.3.RELEASE/spring-security-config-4.0.3.RELEASE.jar!/org/springframework/security/config/spring-security-3.0.3.xsd">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1578,21 +1453,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.1764708">
-          <caret line="64" column="28" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="28" />
+        <state vertical-scroll-proportion="-6.1538463">
+          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="67" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/webapp/WEB-INF/views/index.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/webapp/index.jsp">
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/resources/ehcache/ehcache.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1600,26 +1467,174 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ins-wechat/pom.xml">
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/resources/spring-mvc.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.538462">
-          <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="42" />
+        <state vertical-scroll-proportion="-77.80769">
+          <caret line="119" column="33" selection-start-line="119" selection-start-column="33" selection-end-line="119" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/resources/freemarkerstatic.properties">
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/resources/spring-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.851852">
+          <caret line="97" column="8" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/resources/spring-config-cache.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.2037036">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/credentials/RetryLimitHashedCredentialsMatcher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/pom.xml">
+    <entry file="jar://D:/repository/org/apache/shiro/shiro-core/1.2.4/shiro-core-1.2.4.jar!/org/apache/shiro/realm/AuthenticatingRealm.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="15.461538">
-          <caret line="219" column="22" selection-start-line="219" selection-start-column="15" selection-end-line="219" selection-end-column="22" />
+        <state vertical-scroll-proportion="1.9457831">
+          <caret line="86" column="45" selection-start-line="86" selection-start-column="45" selection-end-line="86" selection-end-column="45" />
+          <folding>
+            <element signature="e#3415#3416#0" expanded="true" />
+            <element signature="e#3462#3463#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/repository/org/springframework/spring-aop/4.2.2.RELEASE/spring-aop-4.2.2.RELEASE.jar!/org/springframework/aop/framework/autoproxy/DefaultAdvisorAutoProxyCreator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.642857">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/resources/spring-mvc-shiro.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="21.722221">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/UserAdminExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/UserAdminMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-505.42307">
+          <caret line="1433" column="83" selection-start-line="1433" selection-start-column="83" selection-end-line="1433" selection-end-column="83" />
+          <folding>
+            <marker date="1451459347083" expanded="true" signature="12181:12286" placeholder="select from ..user_admin..." />
+            <marker date="1451459347083" expanded="true" signature="12369:12428" placeholder="delete from ..." />
+            <marker date="1451459347083" expanded="true" signature="12535:12557" placeholder="delete from ..." />
+            <marker date="1451459347083" expanded="true" signature="12740:13048" placeholder="insert into user_admin..." />
+            <marker date="1451459347083" expanded="true" signature="14425:14456" placeholder="select count..user_admin..." />
+            <marker date="1451459347083" expanded="true" signature="15553:15914" placeholder="update user_..." />
+            <marker date="1451459347083" expanded="true" signature="16128:16746" placeholder="update user_..." />
+            <marker date="1451459347083" expanded="true" signature="16849:17164" placeholder="update user_..." />
+            <marker date="1451459347083" expanded="true" signature="20665:20770" placeholder="select from ..user_admin..." />
+            <marker date="1451459347083" expanded="true" signature="20853:20912" placeholder="delete from ..." />
+            <marker date="1451459347083" expanded="true" signature="21019:21041" placeholder="delete from ..." />
+            <marker date="1451459347083" expanded="true" signature="21224:21532" placeholder="insert into user_admin..." />
+            <marker date="1451459347083" expanded="true" signature="22909:22940" placeholder="select count..user_admin..." />
+            <marker date="1451459347083" expanded="true" signature="24037:24398" placeholder="update user_..." />
+            <marker date="1451459347083" expanded="true" signature="24612:25230" placeholder="update user_..." />
+            <marker date="1451459347083" expanded="true" signature="25333:25648" placeholder="update user_..." />
+            <marker date="1451459347083" expanded="true" signature="29149:29254" placeholder="select from ..user_admin..." />
+            <marker date="1451459347083" expanded="true" signature="29337:29396" placeholder="delete from ..." />
+            <marker date="1451459347083" expanded="true" signature="29503:29525" placeholder="delete from ..." />
+            <marker date="1451459347083" expanded="true" signature="29708:30016" placeholder="insert into user_admin..." />
+            <marker date="1451459347083" expanded="true" signature="31393:31424" placeholder="select count..user_admin..." />
+            <marker date="1451459347083" expanded="true" signature="32521:32882" placeholder="update user_..." />
+            <marker date="1451459347083" expanded="true" signature="33096:33714" placeholder="update user_..." />
+            <marker date="1451459347083" expanded="true" signature="33817:34132" placeholder="update user_..." />
+            <marker date="1451459347083" expanded="true" signature="37633:37738" placeholder="select from ..user_admin..." />
+            <marker date="1451459347083" expanded="true" signature="37821:37880" placeholder="delete from ..." />
+            <marker date="1451459347083" expanded="true" signature="37987:38009" placeholder="delete from ..." />
+            <marker date="1451459347083" expanded="true" signature="38192:38500" placeholder="insert into user_admin..." />
+            <marker date="1451459347083" expanded="true" signature="39877:39908" placeholder="select count..user_admin..." />
+            <marker date="1451459347083" expanded="true" signature="41005:41366" placeholder="update user_..." />
+            <marker date="1451459347083" expanded="true" signature="41580:42198" placeholder="update user_..." />
+            <marker date="1451459347083" expanded="true" signature="42301:42616" placeholder="update user_..." />
+            <marker date="1451459347083" expanded="true" signature="46117:46222" placeholder="select from ..user_admin..." />
+            <marker date="1451459347083" expanded="true" signature="46305:46364" placeholder="delete from ..." />
+            <marker date="1451459347083" expanded="true" signature="46471:46493" placeholder="delete from ..." />
+            <marker date="1451459347083" expanded="true" signature="46676:46984" placeholder="insert into user_admin..." />
+            <marker date="1451459347083" expanded="true" signature="48361:48392" placeholder="select count..user_admin..." />
+            <marker date="1451459347083" expanded="true" signature="49489:49850" placeholder="update user_..." />
+            <marker date="1451459347083" expanded="true" signature="50064:50682" placeholder="update user_..." />
+            <marker date="1451459347083" expanded="true" signature="50785:51100" placeholder="update user_..." />
+            <marker date="1451459347083" expanded="true" signature="54601:54706" placeholder="select from ..user_admin..." />
+            <marker date="1451459347083" expanded="true" signature="54789:54848" placeholder="delete from ..." />
+            <marker date="1451459347083" expanded="true" signature="54955:54977" placeholder="delete from ..." />
+            <marker date="1451459347083" expanded="true" signature="55160:55468" placeholder="insert into user_admin..." />
+            <marker date="1451459347083" expanded="true" signature="56845:56876" placeholder="select count..user_admin..." />
+            <marker date="1451459347083" expanded="true" signature="57973:58334" placeholder="update user_..." />
+            <marker date="1451459347083" expanded="true" signature="58548:59166" placeholder="update user_..." />
+            <marker date="1451459347083" expanded="true" signature="59269:59584" placeholder="update user_..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/UserAdmin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/controller/UploadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="71" column="24" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/DateUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/StreamGobbler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="51" column="26" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/mapper/CustomerAssetsMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -1627,53 +1642,142 @@
     <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/controller/BaseController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/resources/resources.properties">
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/mapper/UserAdminMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/resources/spring-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.092592">
-          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+          <caret line="19" column="52" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="52" />
           <folding>
-            <element signature="e#3497#3515#0" expanded="true" />
-            <element signature="e#4327#4341#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/resources/spring-mvc.xml">
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/UUIDGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.037037">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/webapp/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/ToolUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.307693">
-          <caret line="70" column="18" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
+        <state vertical-scroll-proportion="12.576271">
+          <caret line="369" column="43" selection-start-line="369" selection-start-column="25" selection-end-line="369" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/controller/index/IndexController.java">
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/utils/EncryptUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42095238">
-          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#432#433#0" expanded="false" />
+            <element signature="e#473#474#0" expanded="false" />
+            <element signature="e#615#616#0" expanded="false" />
+            <element signature="e#656#657#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/mapper/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/repository/org/springframework/spring-beans/4.2.2.RELEASE/spring-beans-4.2.2.RELEASE-sources.jar!/org/springframework/beans/factory/annotation/Autowired.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#3176#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/resources/generatorConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65384614">
+          <caret line="71" column="71" selection-start-line="71" selection-start-column="71" selection-end-line="71" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/realm/UserRealm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="52" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.538462">
+          <caret line="249" column="22" selection-start-line="249" selection-start-column="22" selection-end-line="249" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/UserExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="597" column="32" selection-start-line="597" selection-start-column="32" selection-end-line="597" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/service/SecurityService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="67" selection-start-line="22" selection-start-column="67" selection-end-line="22" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/RoleMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-40.73077">
+          <caret line="244" column="10" selection-start-line="244" selection-start-column="10" selection-end-line="244" selection-end-column="10" />
+          <folding>
+            <marker date="1451459346974" expanded="true" signature="3828:3927" placeholder="select from ..role..." />
+            <marker date="1451459346974" expanded="true" signature="4011:4064" placeholder="delete from ..." />
+            <marker date="1451459346974" expanded="true" signature="4167:4183" placeholder="delete from ..." />
+            <marker date="1451459346974" expanded="true" signature="4363:4730" placeholder="insert into role..." />
+            <marker date="1451459346974" expanded="true" signature="6304:6329" placeholder="select count..role..." />
+            <marker date="1451459346974" expanded="true" signature="7577:8011" placeholder="update role ..." />
+            <marker date="1451459346974" expanded="true" signature="8222:8972" placeholder="update role ..." />
+            <marker date="1451459346974" expanded="true" signature="9071:9452" placeholder="update role ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/RoleExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.3496622">
+          <caret line="450" column="9" selection-start-line="450" selection-start-column="9" selection-end-line="450" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1731,12 +1835,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>ins-web</last-edited>
+          <last-edited>Spring|ins-web</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.24378109" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -1761,6 +1864,17 @@
             <option name="proportions">
               <list>
                 <option value="0.24378109" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>

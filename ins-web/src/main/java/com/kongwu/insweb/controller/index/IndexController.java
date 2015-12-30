@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 public class IndexController extends BaseController{
 
 
-    @RequestMapping("/index")
+    @RequestMapping("/")
     public String index(HttpServletRequest request, HttpServletResponse response) {
         System.out.println(111);
         return "index";

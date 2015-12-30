@@ -5,15 +5,11 @@ import java.util.Date;
 public class RoleUserRel {
     private Long id;
 
-    private String code;
+    private Long roleId;
 
-    private String name;
-
-    private String description;
+    private Long uid;
 
     private String status;
-
-    private Integer roleIndex;
 
     private Date createTime;
 
@@ -27,28 +23,20 @@ public class RoleUserRel {
         this.id = id;
     }
 
-    public String getCode() {
-        return code;
+    public Long getRoleId() {
+        return roleId;
     }
 
-    public void setCode(String code) {
-        this.code = code == null ? null : code.trim();
+    public void setRoleId(Long roleId) {
+        this.roleId = roleId;
     }
 
-    public String getName() {
-        return name;
+    public Long getUid() {
+        return uid;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description == null ? null : description.trim();
+    public void setUid(Long uid) {
+        this.uid = uid;
     }
 
     public String getStatus() {
@@ -57,14 +45,6 @@ public class RoleUserRel {
 
     public void setStatus(String status) {
         this.status = status == null ? null : status.trim();
-    }
-
-    public Integer getRoleIndex() {
-        return roleIndex;
-    }
-
-    public void setRoleIndex(Integer roleIndex) {
-        this.roleIndex = roleIndex;
     }
 
     public Date getCreateTime() {

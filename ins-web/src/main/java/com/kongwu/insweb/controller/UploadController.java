@@ -1,8 +1,10 @@
 package com.kongwu.insweb.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.kongwu.insweb.service.SecurityService;
 import com.kongwu.insweb.utils.ImgUtils;
 import org.apache.commons.fileupload.disk.DiskFileItem;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -66,4 +68,6 @@ public class UploadController extends BaseController{
 
         return resultMap;
     }
+    @Autowired
+    private SecurityService securityService;
 }

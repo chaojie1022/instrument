@@ -7719,3 +7719,6 @@ fieldset[disabled] .flatdoc-wrapper .button.active {
   color: #23b7e5;
   background-color: #ffffff;
 }
+*{
+  font-family: "Microsoft Yahei";
+}

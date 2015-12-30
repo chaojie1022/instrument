@@ -82,6 +82,8 @@
         <property name="exposeSessionAttributes" value="true"/>
         <property name="requestContextAttribute" value="rc"/>
         <property name="contentType" value="text/html;charset=UTF-8"/>
+        <property name="viewClass" value="com.kongwu.insweb.freemarker.MyFreeMarkerView"/>
+
     </bean>
 
     <!-- 控制器异常处理 -->
@@ -115,6 +117,5 @@
             </map>
         </property>
     </bean>
-
 
 </beans>
