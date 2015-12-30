@@ -2,8 +2,9 @@ package com.kongwu.insweb.mapper;
 
 import com.kongwu.insweb.entity.Role;
 import com.kongwu.insweb.entity.RoleExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface RoleMapper {
     int countByExample(RoleExample example);

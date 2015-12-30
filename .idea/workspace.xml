@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ff79680b-fc45-49bf-86d0-b9c36ef55843" name="Default" comment="环境搭建">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/Role.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/RoleExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/xml/RoleMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/mapper/RoleMapper.java" />
+    <list default="true" id="ff79680b-fc45-49bf-86d0-b9c36ef55843" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/mapper/RoleMapper.java" afterPath="$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/mapper/RoleMapper.java" />
     </list>
     <ignored path="instrument.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,21 +51,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Role.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Role.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/Role.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-0.0050675673">
               <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RoleMapper.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RoleMapper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/mapper/RoleMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.11486486">
-              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -571,44 +568,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="entity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instrument" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ins-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="insweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xml" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1128,7 +1087,7 @@
       <workItem from="1451437606450" duration="5474000" />
       <workItem from="1451450262771" duration="94000" />
       <workItem from="1451450368051" duration="760000" />
-      <workItem from="1451451134316" duration="9546000" />
+      <workItem from="1451451134316" duration="9595000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1451459797399</created>
@@ -1142,11 +1101,17 @@
       <option name="project" value="LOCAL" />
       <updated>1451460583252</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="环境搭建">
+      <created>1451460708988</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1451460708988</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30189000" />
+    <option name="totallyTimeSpent" value="30238000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1709,18 +1674,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/Role.java">
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/mapper/RoleMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/mapper/RoleMapper.java">
+    <entry file="file://$PROJECT_DIR$/ins-web/src/main/java/com/kongwu/insweb/entity/Role.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11486486">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        <state vertical-scroll-proportion="-0.0050675673">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding />
         </state>
       </provider>
